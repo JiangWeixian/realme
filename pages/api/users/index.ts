@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
-export const createYearOfProgress = ({ color = 'black' }: { color: string }) => {
+export const createYearOfProgress = ({ color = 'black', scale = 0.75 }: { color: string, scale }) => {
   return `
-<svg width="800px" height="100px" viewBox="0 0 800 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
@@ -15,7 +15,8 @@ export const createYearOfProgress = ({ color = 'black' }: { color: string }) => 
           border: 2px solid;
           transform: scale(var(--ggs,1));
           border-radius: 4px;
-          color: ${color}
+          color: ${color};
+          --ggs: ${scale};
       }
       .gg-add-r::after,
       .gg-add-r::before {
@@ -46,7 +47,7 @@ export const createYearOfProgress = ({ color = 'black' }: { color: string }) => 
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const yearOfProgress = createYearOfProgress({ color: req.query.color as string })
+    const yearOfProgress = createYearOfProgress({ color: req.query.color as string, scale: req.query.scale as number })
     res.setHeader('Content-Type', 'image/svg+xml')
     res.status(200).end(yearOfProgress)
   } catch (err) {

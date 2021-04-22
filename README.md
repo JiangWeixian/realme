@@ -2,6 +2,16 @@
 
 This is a really simple project that shows the usage of Next.js with TypeScript.
 
+[v23]: https://img.shields.io/badge/-2%2F3-3C8171
+[v2]: https://img.shields.io/badge/-v2-42b883
+[v3]: https://img.shields.io/badge/-v3-35495e
+[v4]: https://realme-ten.vercel.app/api/users
+
+[![icon](https://realme-ten.vercel.app/api/users)](1) 1
+
+
+- ![v4] [@vitejs/plugin-vue](https://github.com/vitejs/vite/tree/main/packages/plugin-vue) - Official Vue 3 support.
+
 ## Deploy your own
 
 Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
