@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
-export const createYearOfProgress = ({ color = 'black', scale = 1 }: { color: string, scale: string | number }) => {
+export const createYearOfProgress = () => {
   return `
   <svg width="560px" height="420px" viewBox="0 0 560 420" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <foreignObject width="100%" height="100%">
@@ -229,9 +229,9 @@ export const createYearOfProgress = ({ color = 'black', scale = 1 }: { color: st
   `
 }
 
-export default (req: NextApiRequest, res: NextApiResponse) => {
+export default (_req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const yearOfProgress = createYearOfProgress({ color: req.query.color as string, scale: req.query.scale as string })
+    const yearOfProgress = createYearOfProgress()
     res.setHeader('Content-Type', 'image/svg+xml')
     res.status(200).end(yearOfProgress)
   } catch (err) {
