@@ -152,7 +152,7 @@ export const Sliders = () => {
               tabindex="0"
               class="carousel__slide">
             <div class="carousel__snapper">
-            <img src=${assets.default}/>
+              <img src="${assets.default}" />
             </div>
           </li>
           <li id="carousel__slide2"
