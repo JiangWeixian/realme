@@ -1,4 +1,8 @@
-<svg width="560px" height="420px" viewBox="0 0 560 420" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+import { NextApiRequest, NextApiResponse } from 'next'
+
+export const createYearOfProgress = () => {
+  return `
+  <svg width="560px" height="420px" viewBox="0 0 560 420" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
@@ -164,3 +168,15 @@
     </div>
   </foreignObject>
 </svg>
+  `
+}
+
+export default (_req: NextApiRequest, res: NextApiResponse) => {
+  try {
+    const yearOfProgress = createYearOfProgress()
+    res.setHeader('Content-Type', 'image/svg+xml')
+    res.status(200).end(yearOfProgress)
+  } catch (err) {
+    res.status(404).json({ statusCode: 404, message: err.message })
+  }
+}
