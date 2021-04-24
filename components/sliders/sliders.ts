@@ -2,7 +2,7 @@ import { assets } from './constants'
 
 export const Sliders = () => {
   return `
-  <svg width="560px" height="420px" viewBox="0 0 560 420" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <svg width="800px" height="400px" viewBox="0 0 800 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
@@ -152,20 +152,25 @@ export const Sliders = () => {
               tabindex="0"
               class="carousel__slide">
             <div class="carousel__snapper">
-              <img src="${assets.default}" />
             </div>
+            <img src="${assets.slider1}" />
+
           </li>
           <li id="carousel__slide2"
               tabindex="0"
               class="carousel__slide">
             <div class="carousel__snapper">
             </div>
+            <img src="${assets.slider2}" />
+
           </li>
           <li id="carousel__slide3"
               tabindex="0"
               class="carousel__slide">
             <div class="carousel__snapper">
             </div>
+            <img src="${assets.slider3}" />
+
           </li>
         </ol>
       </section>
