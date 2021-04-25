@@ -1,6 +1,12 @@
-import { assets } from './constants'
+import { defaultProps } from './constants'
 
-export const Sliders = () => {
+export type SlidersProps = {
+  dataSource: {
+    value: string
+  }[]
+}
+
+export const Sliders = (props: SlidersProps = defaultProps) => {
   return `
   <svg width="800px" height="400px" viewBox="0 0 800 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <foreignObject width="100%" height="100%">
@@ -26,10 +32,10 @@ export const Sliders = () => {
             left: 0;
           }
           95% {
-            left: -200%;
+            left: -${props.dataSource.length - 1}%;
           }
           98% {
-            left: -200%;
+            left: -${props.dataSource.length - 1}%;
           }
           99% {
             left: 0;
@@ -148,30 +154,16 @@ export const Sliders = () => {
       </style>
       <section class="carousel" aria-label="Gallery">
         <ol class="carousel__viewport">
-          <li id="carousel__slide1"
-              tabindex="0"
-              class="carousel__slide">
-            <div class="carousel__snapper">
-            </div>
-            <img src="${assets.slider1}" />
-
-          </li>
-          <li id="carousel__slide2"
-              tabindex="0"
-              class="carousel__slide">
-            <div class="carousel__snapper">
-            </div>
-            <img src="${assets.slider2}" />
-
-          </li>
-          <li id="carousel__slide3"
-              tabindex="0"
-              class="carousel__slide">
-            <div class="carousel__snapper">
-            </div>
-            <img src="${assets.slider3}" />
-
-          </li>
+          ${props.dataSource.map(v => {
+            return (
+              `<li id="carousel__slide1"
+                tabindex="0"
+                class="carousel__slide">
+                <div class="carousel__snapper" />
+                <img src="${v.value}" />
+              </li>`
+            )
+          })}
         </ol>
       </section>
     </div>
