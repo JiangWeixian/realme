@@ -32,10 +32,10 @@ export const Sliders = (props: SlidersProps = defaultProps) => {
             left: 0;
           }
           95% {
-            left: -${props.dataSource.length - 1}%;
+            left: -${(props.dataSource.length - 1) * 100}%;
           }
           98% {
-            left: -${props.dataSource.length - 1}%;
+            left: -${(props.dataSource.length - 1) * 100}%;
           }
           99% {
             left: 0;
