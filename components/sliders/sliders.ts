@@ -163,7 +163,7 @@ export const Sliders = (props: SlidersProps = defaultProps) => {
                 <img src="${v.value}" />
               </li>`
             )
-          })}
+          }).join('\n')}
         </ol>
       </section>
     </div>
