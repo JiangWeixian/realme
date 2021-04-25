@@ -1,4 +1,4 @@
-import { defaultProps } from './constants'
+import defaultProps from './constants.json'
 
 export type SlidersProps = {
   dataSource: {
