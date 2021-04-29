@@ -1,23 +1,28 @@
 # @realme
-> components design for github readme
+> api components design for github readme
 
+## usage
 
-
-> **💡 NOTE**  
-still under heavy development :(
+### `sliders`
 
 [sliders]: https://realme-ten.vercel.app/api/sliders
 
 ![sliders]
 
-*usage*
-
-```markdown
-![sliders](https://realme-ten.vercel.app/api/sliders)
-```
-
-custom props
+*usage ▼*
 
 ```markdown
 ![sliders](https://realme-ten.vercel.app/api/sliders?props=https://raw.githubusercontent.com/JiangWeixian/realme/master/assets/sliders.json)
 ```
+
+params
+
+- `props` - json url, josn format like below
+  
+  ```ts
+  const props = {
+    dataSource: {
+      value: string // image-base64 string
+    }[]
+  }
+  ```
