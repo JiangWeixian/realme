@@ -32,6 +32,3 @@ params
 [codehighlight]: https://realme-ten.vercel.app/api/code-highlight?url=https://raw.githubusercontent.com/JiangWeixian/realme/master/components/Layout.tsx&range=L17-L20
 
 ![codehighlight]
-
-<img src="./assets/code-highlight.svg" />
-dd
