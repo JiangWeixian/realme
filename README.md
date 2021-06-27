@@ -26,3 +26,9 @@ params
     }[]
   }
   ```
+
+### `code-highlight`
+
+[codehighlight]: https://realme-ten.vercel.app/api/code-highlight
+
+![codehighlight]
