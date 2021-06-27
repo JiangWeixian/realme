@@ -32,3 +32,6 @@ params
 [codehighlight]: https://realme-ten.vercel.app/api/code-highlight
 
 ![codehighlight]
+
+<img src="./assets/code-highlight.svg" />
+dd

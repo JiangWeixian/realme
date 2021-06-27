@@ -17,6 +17,7 @@ type CodeHighlightProps = {
   code?: string
   language?: Language
   title?: string
+  height?: number
 }
 
 export const Core = ({ language = 'tsx', code = exampleCode, title = 'Untitled-1' }: CodeHighlightProps) => {
@@ -38,43 +39,47 @@ export const Core = ({ language = 'tsx', code = exampleCode, title = 'Untitled-1
   )
 }
 
-export const CodeHighlight = (props: CodeHighlightProps) => {
+export const CodeHighlight = ({ height = 300, ...props }: CodeHighlightProps) => {
   const code = renderToString(<Core {...props} />)
   const gradient = gradients[0]
   const deg = `${gradient.deg}deg`
   const colors = gradient.gradient.map(g => `${g.color} ${g.pos}%`).join(', ')
   return `
-  <svg width="800px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <svg width="800px" height="${height}px" viewBox="0 0 800 ${height}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <style>
   foreignObject {
     overflow: visible;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
   }
   </style>
-  <foreignObject width="1" height="1">
+  <foreignObject>
     <div class="container" xmlns="http://www.w3.org/1999/xhtml">
       <style>
       .container {
         background-image: linear-gradient(${deg}, ${colors});
         margin: 0px;
-        padding: 0px;
         background-position: 0 0;
         padding: 12px 24px;
         display: inline-block;
-        width: 800px;
         box-sizing: border-box;
-      }
-      .editor {
         width: 100%;
-        height: 100%;
-        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        overflow: hidden;
-        display: inline-block;
+        height: ${height}px;
+        display: flex;
+        align-items: center;
       }
       pre {
         padding: 16px;
         margin: 0px;
         font-family: monospace;
+        font-size: 16px;
+        width: 100%;
+        height: min-content;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        display: inline-block;
       }
       .title {
         margin: 0px;
@@ -86,9 +91,7 @@ export const CodeHighlight = (props: CodeHighlightProps) => {
         font-family: Inter var,sans-serif;
       }
       </style>
-        <div class="editor">
           ${code}
-        </div>
     </div>
   </foreignObject>
 </svg>
