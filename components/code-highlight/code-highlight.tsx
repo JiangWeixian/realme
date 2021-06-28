@@ -20,12 +20,25 @@ type CodeHighlightProps = {
   height?: number
 }
 
+const Icons = () => {
+  return (
+    <div className="icons">
+      <i className="icon" />
+      <i className="icon" />
+      <i className="icon" />
+    </div>
+  )
+}
+
 export const Core = ({ language = 'tsx', code = exampleCode, title = 'Untitled-1' }: CodeHighlightProps) => {
   return (
     <Highlight {...defaultProps} code={code} theme={theme} language={language}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={className} style={style}>
-          <p className="title">{title}</p>
+          <div className="bar">
+            <Icons />
+            <p className="title">{title}</p>
+          </div>
           {tokens.map((line, i) => (
             <div {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (
@@ -72,8 +85,42 @@ export const CodeHighlight = ({ height = 300, bg = 'Warm Flame', ...props }: Cod
         display: flex;
         align-items: center;
       }
+      .bar {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 16px;
+        margin-bottom: 8px;
+      }
+      .icons {
+        display: flex;
+        align-items: center;
+      }
+      .icon {
+        width: 12px;
+        height: 12px;
+        margin-right: 8px;
+        border-radius: 100%;
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+      .title {
+        margin: 0px;
+        width: 100%;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.3);
+        font-weight: 500;
+        font-size: 12px;
+        font-family: Inter var,sans-serif;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        margin: auto auto;
+      }
       pre {
         padding: 16px;
+        padding-top: 8px;
         margin: 0px;
         font-family: monospace;
         font-size: 16px;
@@ -84,17 +131,9 @@ export const CodeHighlight = ({ height = 300, bg = 'Warm Flame', ...props }: Cod
         overflow: hidden;
         display: inline-block;
       }
-      .title {
-        margin: 0px;
-        width: 100%;
-        text-align: center;
-        color: rgba(255, 255, 255, 0.3);
-        font-weight: 500;
-        font-size: 12px;
-        font-family: Inter var,sans-serif;
-      }
+      
       </style>
-          ${code}
+      ${code}
     </div>
   </foreignObject>
 </svg>
