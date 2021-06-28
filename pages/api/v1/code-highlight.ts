@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import axios from 'axios'
 import type { Language } from 'prism-react-renderer'
 
-import { CodeHighlight } from '../../components/code-highlight/code-highlight'
+import { CodeHighlight } from '../../../components/code-highlight/code-highlight'
 const regex = /[0-9]+/g
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {

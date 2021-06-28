@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import axios from 'axios'
 
-import { Sliders } from '../../components/sliders/sliders'
+import { Sliders } from '../../../components/sliders/sliders'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {

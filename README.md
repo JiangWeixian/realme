@@ -5,14 +5,14 @@
 
 ### `sliders`
 
-[sliders]: https://realme-ten.vercel.app/api/sliders
+[sliders]: https://realme-ten.vercel.app/api/v1/sliders
 
 ![sliders]
 
 *usage ▼*
 
 ```markdown
-![sliders](https://realme-ten.vercel.app/api/sliders?props=https://raw.githubusercontent.com/JiangWeixian/realme/master/assets/sliders.json)
+![sliders](https://realme-ten.vercel.app/api/v1/sliders?props=https://raw.githubusercontent.com/JiangWeixian/realme/master/assets/sliders.json)
 ```
 
 params
@@ -29,6 +29,6 @@ params
 
 ### `code-highlight`
 
-[codehighlight]: https://realme-ten.vercel.app/api/code-highlight?url=https://raw.githubusercontent.com/JiangWeixian/realme/master/components/Layout.tsx&range=L17-L20
+[codehighlight]: https://realme-ten.vercel.app/api/v1/code-highlight?url=https://raw.githubusercontent.com/JiangWeixian/realme/master/components/Layout.tsx&range=L17-L20
 
 ![codehighlight]
