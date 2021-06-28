@@ -39,9 +39,12 @@ export const Core = ({ language = 'tsx', code = exampleCode, title = 'Untitled-1
   )
 }
 
-export const CodeHighlight = ({ height = 300, ...props }: CodeHighlightProps) => {
+export const CodeHighlight = ({ height = 300, bg = 'Warm Flame', ...props }: CodeHighlightProps & { bg?: string }) => {
   const code = renderToString(<Core {...props} />)
-  const gradient = gradients[0]
+  let gradient = gradients.find(item => item.name === bg)
+  if (!gradient) {
+    gradient = gradients[0]
+  }
   const deg = `${gradient.deg}deg`
   const colors = gradient.gradient.map(g => `${g.color} ${g.pos}%`).join(', ')
   return `
