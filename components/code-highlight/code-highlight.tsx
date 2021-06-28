@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 import { renderToString } from 'react-dom/server'
-import Highlight, { defaultProps, Language } from "prism-react-renderer";
-import theme from "prism-react-renderer/themes/nightOwl";
+import Highlight, { defaultProps, Language } from 'prism-react-renderer'
+import theme from 'prism-react-renderer/themes/nightOwl'
 import gradients from 'styled-webgradients/lib/gradients.json'
 
 const exampleCode = `
@@ -11,7 +11,7 @@ const exampleCode = `
 })();
 
 return () => <App />;
-`;
+`
 
 type CodeHighlightProps = {
   code?: string
@@ -30,7 +30,11 @@ const Icons = () => {
   )
 }
 
-export const Core = ({ language = 'tsx', code = exampleCode, title = 'Untitled-1' }: CodeHighlightProps) => {
+export const Core = ({
+  language = 'tsx',
+  code = exampleCode,
+  title = 'Untitled-1',
+}: CodeHighlightProps) => {
   return (
     <Highlight {...defaultProps} code={code} theme={theme} language={language}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
@@ -52,14 +56,18 @@ export const Core = ({ language = 'tsx', code = exampleCode, title = 'Untitled-1
   )
 }
 
-export const CodeHighlight = ({ height = 300, bg = 'Warm Flame', ...props }: CodeHighlightProps & { bg?: string }) => {
+export const CodeHighlight = ({
+  height = 300,
+  bg = 'Warm Flame',
+  ...props
+}: CodeHighlightProps & { bg?: string }) => {
   const code = renderToString(<Core {...props} />)
-  let gradient = gradients.find(item => item.name === bg)
+  let gradient = gradients.find((item) => item.name === bg)
   if (!gradient) {
     gradient = gradients[0]
   }
   const deg = `${gradient.deg}deg`
-  const colors = gradient.gradient.map(g => `${g.color} ${g.pos}%`).join(', ')
+  const colors = gradient.gradient.map((g) => `${g.color} ${g.pos}%`).join(', ')
   return `
   <svg width="800px" height="${height}px" viewBox="0 0 800 ${height}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <style>

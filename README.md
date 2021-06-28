@@ -1,4 +1,5 @@
 # @realme
+
 > github readme component api kit
 
 ## features
@@ -8,36 +9,13 @@
 
 ## usage
 
-### `code-highlight`
-
-[codehighlight]: https://realme-ten.vercel.app/api/v1/code-highlight?url=https://raw.githubusercontent.com/JiangWeixian/realme/master/components/Layout.tsx&range=L17-L20
-
-![codehighlight]
-
-*usage ▼*
-
-```markdown
-![codehighlight](https://realme-ten.vercel.app/api/v1/code-highlight?url=https://raw.githubusercontent.com/JiangWeixian/realme/master/components/Layout.tsx&range=L17-L20)
-```
-
-endpoint
-
-- `https://realme-ten.vercel.app/api/v1/code-highlight`
-
-params
-
-- `url` - file remote url
-- `range` - code line range in `file remote url`, like `L17-L20`
-- `height` - define image height
-- `bg` - background web-gradients type, like `Warm Flame`, you can find all kinds of `webgradients` [here](https://webgradients.com/) 
-
 ### `sliders`
 
 [sliders]: https://realme-ten.vercel.app/api/v1/sliders
 
 ![sliders]
 
-*usage ▼*
+_usage ▼_
 
 ```markdown
 ![sliders](https://realme-ten.vercel.app/api/v1/sliders?props=https://raw.githubusercontent.com/JiangWeixian/realme/master/assets/sliders.json)
@@ -50,7 +28,7 @@ endpoint
 params
 
 - `props` - json url, josn format like below
-  
+
   ```ts
   const props = {
     dataSource: {
@@ -58,4 +36,3 @@ params
     }[]
   }
   ```
-

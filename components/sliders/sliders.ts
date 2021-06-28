@@ -154,16 +154,16 @@ export const Sliders = (props: SlidersProps = defaultProps) => {
       </style>
       <section class="carousel" aria-label="Gallery">
         <ol class="carousel__viewport">
-          ${props.dataSource.map(v => {
-            return (
-              `<li id="carousel__slide1"
+          ${props.dataSource
+            .map((v) => {
+              return `<li id="carousel__slide1"
                 tabindex="0"
                 class="carousel__slide">
                 <div class="carousel__snapper" />
                 <img src="${v.value}" />
               </li>`
-            )
-          }).join('\n')}
+            })
+            .join('\n')}
         </ol>
       </section>
     </div>

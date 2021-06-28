@@ -16,7 +16,6 @@ Jenkinsfile
 *.styl.d.ts
 /.docz
 *.json
-*.md
 *.sh
 *.html
 *.lock

@@ -6,9 +6,12 @@ import { Sliders } from '../../../components/sliders/sliders'
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const url = req.query.props as string
-    const props = await axios.get(url).then(res => res.data).catch(e => {
-      console.error(e)
-    })
+    const props = await axios
+      .get(url)
+      .then((res) => res.data)
+      .catch((e) => {
+        console.error(e)
+      })
     const sliders = Sliders(props)
     res.setHeader('Content-Type', 'image/svg+xml')
     res.status(200).end(sliders)
