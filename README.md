@@ -32,3 +32,14 @@ params
 [codehighlight]: https://realme-ten.vercel.app/api/v1/code-highlight?url=https://raw.githubusercontent.com/JiangWeixian/realme/master/components/Layout.tsx&range=L17-L20
 
 ![codehighlight]
+
+*usage ▼*
+
+```markdown
+![codehighlight](https://realme-ten.vercel.app/api/v1/code-highlight?url=https://raw.githubusercontent.com/JiangWeixian/realme/master/components/Layout.tsx&range=L17-L20)
+```
+
+params
+
+- `url` - file remote url
+- `range` - code block range, like `L17-L20`
