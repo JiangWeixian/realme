@@ -41,15 +41,13 @@ const IndexPage = () => (
   <Layout title="realme">
     <GlobalStyle />
     <Logo>
-    <Image src={logo} layout="fill" />
+      <Image src={logo} layout="fill" />
     </Logo>
-    <Seq>
-    /
-    </Seq>
+    <Seq>/</Seq>
     <Logo width={30} height={30}>
-    <a href="https://github.com/JiangWeixian/realme" target="blank" rel="noopener">
-      <Image src={github} layout="fill" />
-    </a>
+      <a href="https://github.com/JiangWeixian/realme" target="blank" rel="noopener">
+        <Image src={github} layout="fill" />
+      </a>
     </Logo>
   </Layout>
 )

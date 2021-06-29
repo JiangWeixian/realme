@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
-    "prettier": "prettier --config .prettierrc --write 'components/**/*'"
+    "prettier": "prettier --config .prettierrc --write 'pages/**/*'"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -27,6 +27,7 @@
     "@types/styled-components": "^5.1.10",
     "cz-emoji": "^1.3.1",
     "eslint": "^7.29.0",
+    "husky": "3.x",
     "next-images": "^1.8.1",
     "prettier": "^2.3.2",
     "pretty-quick": "^3.1.1",
