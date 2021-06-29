@@ -1,6 +1,11 @@
-# @realme
+<div align='center'>
 
-> github readme component api kit
+![logo](./assets/realme.svg)
+
+*github readme component api kit*
+
+</div>
+
 
 ## features
 
