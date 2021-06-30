@@ -2,10 +2,9 @@
 
 ![logo](./assets/realme.svg)
 
-*github readme component api kit*
+_github readme component api kit_
 
 </div>
-
 
 ## features
 
@@ -16,7 +15,7 @@
 
 ### `code-highlight`
 
-[codehighlight]: https://realme-ten.vercel.app/api/v1/code-highlight?url=https://raw.githubusercontent.com/JiangWeixian/realme/master/components/Layout.tsx&range=L17-L20
+[codehighlight]: https://realme-ten.vercel.app/api/v1/code-highlight?url=https://raw.githubusercontent.com/JiangWeixian/realme/master/README.md&range=L10-L13&title=README.md
 
 ![codehighlight]
 

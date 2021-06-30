@@ -30,13 +30,17 @@ const Icons = () => {
   )
 }
 
+const ext2lng: Record<string, Language> = {
+  md: 'markdown',
+}
+
 export const Core = ({
   language = 'tsx',
   code = exampleCode,
   title = 'Untitled-1',
 }: CodeHighlightProps) => {
   return (
-    <Highlight {...defaultProps} code={code} theme={theme} language={language}>
+    <Highlight {...defaultProps} code={code} theme={theme} language={ext2lng[language] || language}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={className} style={style}>
           <div className="bar">
