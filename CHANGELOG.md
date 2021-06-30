@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.3.0
+
+- ✨ define host
+
 ## v1.2.0
 
 - ✨ `api/codehighlight` highlight remote code
