@@ -15,52 +15,41 @@ _github readme component api kit_
 
 ### `code-highlight`
 
-[codehighlight]: https://realme-ten.vercel.app/api/v1/code-highlight?url=https://raw.githubusercontent.com/JiangWeixian/realme/master/README.md&range=L10-L13&title=README.md
+<div align='center'>
 
-![codehighlight]
+![image-caption](./docs/snapshots/code-highlight.png)  
+_▲ code-highlight_
 
-_usage ▼_
+</div>
 
-```markdown
-![codehighlight](https://realme-ten.vercel.app/api/v1/code-highlight?url=https://raw.githubusercontent.com/JiangWeixian/realme/master/components/Layout.tsx&range=L17-L20)
-```
+<details>
+  <summary>params</summary>
 
-endpoint
+|  name  | description                                                                                                                 |  type  |   default    | required |
+| :----: | :-------------------------------------------------------------------------------------------------------------------------- | :----: | :----------: | :------- |
+| title  | code highlight title                                                                                                        | string |  Untitled-1  | false    |
+|  url   | file remote raw url                                                                                                         | string |      -       | true     |
+|  path  | file remote path, without github raw prefix, etc `/JiangWeixian/realme/master/README.md`                                    | string |      -       | true     |
+| range  | line number range, etc `L17-L20`                                                                                            | string |      -       | true     |
+| height | image height                                                                                                                | number |      -       | false    |
+|   bg   | background web-gradients type, etc `Warm Flame`, you can find all kinds of `webgradients` [here](https://webgradients.com/) | string | `Warm Flame` | false    |
 
-- `https://realme-ten.vercel.app/api/v1/code-highlight`
-
-params
-
-- `title` - code highlight title
-- `url` - file remote url
-- `range` - code line range in `file remote url`, like `L17-L20`
-- `height` - define image height
-- `bg` - background web-gradients type, like `Warm Flame`, you can find all kinds of `webgradients` [here](https://webgradients.com/)
+</details>
 
 ### `sliders`
 
-[sliders]: https://realme-ten.vercel.app/api/v1/sliders
+<div align='center'>
 
-![sliders]
+![image-caption](./docs/snapshots/sliders.png)  
+_▲ sliders_
 
-_usage ▼_
+</div>
 
-```markdown
-![sliders](https://realme-ten.vercel.app/api/v1/sliders?props=https://raw.githubusercontent.com/JiangWeixian/realme/master/assets/sliders.json)
-```
+<details>
+  <summary>params</summary>
 
-endpoint
+| name  | description                 |  type  | default | required |
+| :---: | :-------------------------- | :----: | :-----: | :------- |
+| props | siders props remote raw url | string |    -    | true     |
 
-- `https://realme-ten.vercel.app/api/v1/sliders`
-
-params
-
-- `props` - json url, josn format like below
-
-  ```ts
-  const props = {
-    dataSource: {
-      value: string // image-base64 string
-    }[]
-  }
-  ```
+</details>
