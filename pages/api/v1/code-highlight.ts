@@ -3,11 +3,14 @@ import axios from 'axios'
 import type { Language } from 'prism-react-renderer'
 
 import { CodeHighlight } from '../../../components/code-highlight/code-highlight'
+
+import config from '../../../realme.config'
 const regex = /[0-9]+/g
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const { url, height, title, range, bg } = req.query as any
+    const { height, title, range, bg, path } = req.query as any
+    const url: string = (req.query.url as string) || `https://${config.host}/${path}`
     const seqs = url.split('.')
     const [start, end] = range.split('-')
     const content = await axios
