@@ -18,7 +18,7 @@ _github readme component api kit_
 <div align='center'>
 
 ![image-caption](./docs/snapshots/code-highlight.png)  
-_▲ code-highlight_
+_▲ code-highlight_ / [demo](./docs/code-highlight.md)
 
 </div>
 
@@ -41,7 +41,7 @@ _▲ code-highlight_
 <div align='center'>
 
 ![image-caption](./docs/snapshots/sliders.png)  
-_▲ sliders_
+_▲ sliders_ / [demo](./docs/sliders.md)
 
 </div>
 
