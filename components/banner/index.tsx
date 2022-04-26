@@ -15,8 +15,8 @@ export const Inner = (props: Pick<Props, 'subtitle' | 'title'>) => {
       <div className="circle" />
       <div className="circle small" />
       <div className="content">
-        <p className="subtitle">{props.subtitle}</p>
-        <p className="title">{props.title}</p>
+        <span className="subtitle">{props.subtitle}</span>
+        <span className="title">{props.title}</span>
       </div>
     </div>
   )
@@ -37,9 +37,10 @@ export const Banner = ({
   colorA = defaultProps.colorA,
   colorB = defaultProps.colorB,
   textColor = defaultProps.textColor,
-  ...props
+  title = defaultProps.title,
+  subtitle = defaultProps.subtitle,
 }: Props = defaultProps) => {
-  const code = renderToString(<Inner {...props} />)
+  const code = renderToString(<Inner title={title} subtitle={subtitle} />)
   return `
   <svg width="800px" height="400px" viewBox="0 0 800 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <style>
@@ -85,6 +86,8 @@ export const Banner = ({
       }
       .content {
         padding: 48px;
+        display: flex;
+        flex-direction: column;
       }
       .title {
         font-weight: bolder;
