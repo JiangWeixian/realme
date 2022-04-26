@@ -17,9 +17,22 @@ _github readme component api kit_
 
 ### `code-highlight`
 
+
+```md
+![codehighlight](
+  https://realme-ten.vercel.app/api/v1/code-highlight
+  ?path=/JiangWeixian/realme/master/README.md
+  &range=L10-L13&title=README.md
+)
+```
+
+👇
+
 <div align='center'>
 
-![image-caption](./docs/snapshots/code-highlight.png)  
+
+![codehighlight](https://realme-ten.vercel.app/api/v1/code-highlight?path=/JiangWeixian/realme/master/README.md&range=L10-L13&title=README.md)
+
 _▲ code-highlight_ / [demo](./docs/code-highlight.md)
 
 </div>
@@ -40,9 +53,18 @@ _▲ code-highlight_ / [demo](./docs/code-highlight.md)
 
 ### `sliders`
 
+```md
+![sliders](
+  https://realme-ten.vercel.app/api/v1/sliders
+  ?props=https://jsonkeeper.com/b/5FE5
+)
+```
+
+👇
+
 <div align='center'>
 
-![image-caption](./docs/snapshots/sliders.png)  
+![sliders](https://realme-ten.vercel.app/api/v1/sliders?props=https://jsonkeeper.com/b/5FE5) 
 _▲ sliders_ / [demo](./docs/sliders.md)
 
 </div>
