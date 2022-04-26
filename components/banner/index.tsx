@@ -24,14 +24,16 @@ export const Inner = (props: Pick<Props, 'subtitle' | 'title'>) => {
 
 const defaultProps: Props = {
   // 900
-  colorB: '#373a71',
+  colorB: '373a71',
   // 700
-  colorA: '#484fad',
+  colorA: '484fad',
   // 400
-  textColor: '#8499d6',
+  textColor: '8499d6',
   title: 'Hello',
   subtitle: 'Hello',
 }
+
+const hash = (str: string) => `#${str}`
 
 export const Banner = ({
   colorA = defaultProps.colorA,
@@ -58,7 +60,7 @@ export const Banner = ({
       .container {
         display: flex;
         align-items: center;
-        background: linear-gradient(135deg, ${colorA} 0%, ${colorB} 100%);
+        background: linear-gradient(135deg, ${hash(colorA)} 0%, ${hash(colorB)} 100%);
         width: 800px;
         height: 400px;
         position: relative;
@@ -70,7 +72,7 @@ export const Banner = ({
         border-radius: 100%;
         width: 400px;
         height: 400px;
-        background: ${colorA};
+        background: ${hash(colorA)};
       }
       .small {
         position: absolute;
@@ -95,7 +97,7 @@ export const Banner = ({
         color: white;
       }
       .subtitle {
-        color: ${textColor};
+        color: ${hash(textColor)};
         font-size: 24px;
         font-weight: 600;
       }

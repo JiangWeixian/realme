@@ -15,6 +15,46 @@ _github readme component api kit_
 
 ## usage
 
+### `banner`
+
+```md
+![banner](
+  https://realme-ten.vercel.app/api/v1/banner
+  ?colorA=831843
+  &colorB=be185d
+  &textColor=f472b6
+  &title=World!
+  &subtitle=Hello
+)
+```
+
+👇
+
+<div align='center'>
+
+
+![banner](https://realme-ten.vercel.app/api/v1/banner?colorA=831843&colorB=be185d&textColor=f472b6&title=World!&subtitle=Hello)
+
+_▲ banner_ / [demo](./docs/code-highlight.md)
+
+</div>
+
+**(recommended)** pick color from [tailwindcss](https://tailwindcss.com/docs/customizing-colors), **900 -> colorA, 700 -> colorB, 400 -> textColor**
+
+<details>
+  <summary>params</summary>
+
+| name  | description                 |  type  | default | required |
+| :---: | :-------------------------- | :----: | :-----: | :------- |
+| colorA | main color | string |    484fad    | false     |
+| colorB | second color | string |    373a71    | false     |
+| textColor | subtitle color | string |    8499d6    | false     |
+| title | title content | string |    Hello    | false     |
+| subtile | subtile content | string |    Hello    | false     |
+
+
+</details>
+
 ### `code-highlight`
 
 
