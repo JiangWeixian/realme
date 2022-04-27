@@ -1,3 +1,4 @@
+import React from 'react'
 import logo from '../assets/realme.svg'
 import github from '../assets/github.svg'
 

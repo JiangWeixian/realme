@@ -15,11 +15,64 @@ _github readme component api kit_
 
 ## usage
 
-### `code-highlight`
+### `banner`
+
+```md
+![banner](
+  https://realme-ten.vercel.app/api/v1/banner
+  ?colorA=831843
+  &colorB=be185d
+  &textColor=f472b6
+  &title=World!
+  &subtitle=Hello
+)
+```
+
+👇
 
 <div align='center'>
 
-![image-caption](./docs/snapshots/code-highlight.png)  
+
+![banner](https://realme-ten.vercel.app/api/v1/banner?colorA=831843&colorB=be185d&textColor=f472b6&title=World!&subtitle=Hello)
+
+_▲ banner_ / [demo](./docs/code-highlight.md)
+
+</div>
+
+**(recommended)** pick color from [tailwindcss](https://tailwindcss.com/docs/customizing-colors), **900 -> colorA, 700 -> colorB, 400 -> textColor**
+
+<details>
+  <summary>params</summary>
+
+| name  | description                 |  type  | default | required |
+| :---: | :-------------------------- | :----: | :-----: | :------- |
+| colorA | main color | string |    484fad    | false     |
+| colorB | second color | string |    373a71    | false     |
+| textColor | subtitle color | string |    8499d6    | false     |
+| title | title content | string |    Hello    | false     |
+| subtile | subtile content | string |    Hello    | false     |
+
+
+</details>
+
+### `code-highlight`
+
+
+```md
+![codehighlight](
+  https://realme-ten.vercel.app/api/v1/code-highlight
+  ?path=/JiangWeixian/realme/master/README.md
+  &range=L10-L13&title=README.md
+)
+```
+
+👇
+
+<div align='center'>
+
+
+![codehighlight](https://realme-ten.vercel.app/api/v1/code-highlight?path=/JiangWeixian/realme/master/README.md&range=L10-L13&title=README.md)
+
 _▲ code-highlight_ / [demo](./docs/code-highlight.md)
 
 </div>
@@ -40,9 +93,18 @@ _▲ code-highlight_ / [demo](./docs/code-highlight.md)
 
 ### `sliders`
 
+```md
+![sliders](
+  https://realme-ten.vercel.app/api/v1/sliders
+  ?props=https://jsonkeeper.com/b/5FE5
+)
+```
+
+👇
+
 <div align='center'>
 
-![image-caption](./docs/snapshots/sliders.png)  
+![sliders](https://realme-ten.vercel.app/api/v1/sliders?props=https://jsonkeeper.com/b/5FE5) 
 _▲ sliders_ / [demo](./docs/sliders.md)
 
 </div>
