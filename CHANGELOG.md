@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.4.0
+
+### Minor Changes
+
+- add banner api kit
+
 ## v1.3.0
 
 - ✨ define host
