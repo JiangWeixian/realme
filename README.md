@@ -51,6 +51,7 @@ _▲ banner_ / [demo](./docs/code-highlight.md)
 | textColor | subtitle color | string |    8499d6    | false     |
 | title | title content | string |    Hello    | false     |
 | subtile | subtile content | string |    Hello    | false     |
+| desc | description content | string |    -    | false     |
 
 
 </details>
