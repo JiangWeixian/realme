@@ -7,9 +7,10 @@ type Props = {
   textColor: string
   title: string
   subtitle: string
+  desc: string
 }
 
-export const Inner = (props: Pick<Props, 'subtitle' | 'title'>) => {
+export const Inner = (props: Pick<Props, 'subtitle' | 'title' | 'desc'>) => {
   return (
     <div className="banner">
       <div className="circle" />
@@ -17,6 +18,7 @@ export const Inner = (props: Pick<Props, 'subtitle' | 'title'>) => {
       <div className="content">
         <span className="subtitle">{props.subtitle}</span>
         <span className="title">{props.title}</span>
+        <span className="desc">{props.desc}</span>
       </div>
     </div>
   )
@@ -31,6 +33,7 @@ const defaultProps: Props = {
   textColor: '8499d6',
   title: 'Hello',
   subtitle: 'Hello',
+  desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 }
 
 const hash = (str: string) => `#${str}`
@@ -41,8 +44,9 @@ export const Banner = ({
   textColor = defaultProps.textColor,
   title = defaultProps.title,
   subtitle = defaultProps.subtitle,
+  ...props
 }: Props = defaultProps) => {
-  const code = renderToString(<Inner title={title} subtitle={subtitle} />)
+  const code = renderToString(<Inner title={title} subtitle={subtitle} desc={props.desc} />)
   return `
   <svg width="800px" height="400px" viewBox="0 0 800 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <style>
@@ -95,11 +99,18 @@ export const Banner = ({
         font-weight: bolder;
         font-size: 64px;
         color: white;
+        line-height: 1;
       }
       .subtitle {
         color: ${hash(textColor)};
-        font-size: 24px;
+        font-size: 16px;
         font-weight: 600;
+      }
+      .desc {
+        color: ${hash(textColor)};
+        font-size: 16px;
+        font-style: italic;
+        font-weight: normal;
       }
       </style>
       ${code}
