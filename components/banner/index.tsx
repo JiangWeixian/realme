@@ -103,7 +103,7 @@ export const Banner = ({
       }
       .subtitle {
         color: ${hash(textColor)};
-        font-size: 16px;
+        font-size: 24px;
         font-weight: 600;
       }
       .desc {
@@ -111,6 +111,7 @@ export const Banner = ({
         font-size: 16px;
         font-style: italic;
         font-weight: normal;
+        margin-top: 12px;
       }
       </style>
       ${code}
