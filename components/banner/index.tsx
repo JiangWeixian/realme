@@ -1,5 +1,4 @@
 import React from 'react'
-import { renderToString } from 'react-dom/server'
 
 type Props = {
   colorA: string
@@ -46,21 +45,35 @@ export const Banner = ({
   subtitle = defaultProps.subtitle,
   ...props
 }: Props = defaultProps) => {
-  const code = renderToString(<Inner title={title} subtitle={subtitle} desc={props.desc} />)
-  return `
-  <svg width="800px" height="400px" viewBox="0 0 800 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <style>
-  foreignObject {
-    overflow: hidden;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-  }
-  </style>
-  <foreignObject>
-    <div class="container" xmlns="http://www.w3.org/1999/xhtml">
-      <style>
+  const code = <Inner title={title} subtitle={subtitle} desc={props.desc} />
+  return (
+    <svg
+      width="800px"
+      height="400px"
+      viewBox="0 0 800 400"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+    >
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+    foreignObject {
+      overflow: hidden;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+    }
+  `,
+        }}
+      ></style>
+      <foreignObject>
+        {/* @ts-expect-error */}
+        <div className="container" xmlns="http://www.w3.org/1999/xhtml">
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
       .container {
         display: flex;
         align-items: center;
@@ -113,10 +126,12 @@ export const Banner = ({
         font-weight: normal;
         margin-top: 12px;
       }
-      </style>
-      ${code}
-    </div>
-  </foreignObject>
-</svg>
-`
+      `,
+            }}
+          ></style>
+          {code}
+        </div>
+      </foreignObject>
+    </svg>
+  )
 }
