@@ -1,6 +1,7 @@
 const withImages = require('next-images')
-module.exports = withImages({
-  webpack(config) {
-    return config
-  },
-})
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  swcMinify: true,
+  reactStrictMode: true,
+}
+module.exports = withImages(nextConfig)
