@@ -35,7 +35,7 @@ const defaultProps: Props = {
   desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 }
 
-const hash = (str: string) => `#${str}`
+const hash = (str: string) => (str.startsWith('#') ? str : `#${str}`)
 
 export const Banner = ({
   colorA = defaultProps.colorA,
