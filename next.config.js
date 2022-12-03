@@ -2,6 +2,10 @@
 const nextConfig = {
   swcMinify: true,
   reactStrictMode: true,
+  // disable eslint on build
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
