@@ -1,8 +1,7 @@
 import React from 'react'
-import logo from '../assets/realme.svg'
-import github from '../assets/github.svg'
+import RealmeLogo from 'assets/realme.svg'
+import Github from 'assets/github.svg'
 
-import Image from 'next/image'
 import styled, { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
@@ -22,17 +21,6 @@ const Layout = styled.div`
   box-sizing: border-box;
 `
 
-type LogoProps = {
-  width?: number
-  height?: number
-}
-
-const Logo = styled.div`
-  width: ${({ width = 150 }: LogoProps) => `${width}px`};
-  height: ${({ height = 150 }: LogoProps) => `${height}px`};
-  position: relative;
-`
-
 const Seq = styled.p`
   color: #ccc;
   margin: 0px 12px;
@@ -41,15 +29,11 @@ const Seq = styled.p`
 const IndexPage = () => (
   <Layout title="realme">
     <GlobalStyle />
-    <Logo>
-      <Image src={logo} layout="fill" />
-    </Logo>
+    <RealmeLogo />
     <Seq>/</Seq>
-    <Logo width={30} height={30}>
-      <a href="https://github.com/JiangWeixian/realme" target="blank" rel="noopener">
-        <Image src={github} layout="fill" />
-      </a>
-    </Logo>
+    <a href="https://github.com/JiangWeixian/realme" target="blank" rel="noopener">
+      <Github width={30} height={30} className="fill-black" />
+    </a>
   </Layout>
 )
 
