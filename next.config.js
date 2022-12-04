@@ -6,11 +6,16 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  webpack(config) {
+  webpack(config, context) {
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     })
+    config.plugins.push(
+      new context.webpack.DefinePlugin({
+        'process.env.NEXT_PUBLIC_DEBUG': false,
+      }),
+    )
     return config
   },
 }
