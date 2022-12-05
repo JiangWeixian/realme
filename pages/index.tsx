@@ -12,8 +12,11 @@ import {
 import { Line2 } from 'three-stdlib'
 import { inSphere } from 'maath/random'
 import { a, easings, useSpring, useSprings } from '@react-spring/three'
-
 import styled, { createGlobalStyle } from 'styled-components'
+
+import Github from 'assets/github.svg'
+
+const REPO_URL = 'https://github.com/JiangWeixian/realme'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -52,16 +55,25 @@ const Main = () => {
     },
   }))
   const handlePointerEnter = async () => {
+    document.body.style.cursor = 'pointer'
     await rotateApi.start({ y: Math.PI / 6 })
     await api.start((index) => ({ dz: index }))
   }
   const handlePointerLeave = async () => {
+    document.body.style.cursor = 'auto'
     await api.start(() => ({ dz: 0 }))
     await rotateApi.start({ y: 0 })
   }
   return (
     <a.group rotation={rotate.y.to((v) => [0, -v / 4, 0]) as any}>
-      <mesh visible={false} onPointerEnter={handlePointerEnter} onPointerLeave={handlePointerLeave}>
+      <mesh
+        visible={false}
+        onPointerEnter={handlePointerEnter}
+        onPointerLeave={handlePointerLeave}
+        onClick={() => {
+          window.open(REPO_URL, '_blank', 'noopener')
+        }}
+      >
         <meshBasicMaterial color={[1.25, 1.25, 1.25]} />
         <planeGeometry args={[halfExtent.x * 2, halfExtent.y * 2]} />
       </mesh>
@@ -152,6 +164,11 @@ const IndexPage = () => (
     {/* @ts-expect-error - FIXME: releted to react version */}
     <GlobalStyle />
     <Scene />
+    <div className="absolute right-8 bottom-8 text-white/70 font-thin flex items-center gap-2">
+      <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
+        <Github className="fill-white/70 w-4 h-4" />
+      </a>
+    </div>
   </Layout>
 )
 
