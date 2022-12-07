@@ -13,3 +13,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.status(404).json({ statusCode: 404, message: err.message })
   }
 }
+
+export const config = {
+  api: {
+    externalResolver: true,
+  },
+}
