@@ -144,5 +144,5 @@ export const buildUrl = (props: Props) => {
   for (const [key, value] of Object.entries(props)) {
     params.append(key, withoutHash(value))
   }
-  return `${API_URL}/banner?${params.toString()}`
+  return `${API_URL}/banner.svg?${params.toString()}`
 }
