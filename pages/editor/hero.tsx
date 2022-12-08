@@ -4,7 +4,7 @@ import Link from 'assets/link.svg'
 import copy from 'copy-to-clipboard'
 import { Toaster, toast } from 'react-hot-toast'
 
-import { Banner, buildUrl } from '@/components/banner' 
+import { Banner, buildUrl } from '@/components/banner'
 
 type AlertProps = {
   onClose?: () => void
