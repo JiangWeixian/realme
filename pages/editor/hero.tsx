@@ -106,6 +106,7 @@ const Page = () => {
       <div>
         <Toaster position="bottom-right" />
       </div>
+      <img src={buildUrl(params)} />
     </div>
   )
 }

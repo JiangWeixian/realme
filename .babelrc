@@ -1,0 +1,17 @@
+{
+  "presets": [
+    "next/babel"
+  ],
+  "plugins": [
+    [
+      "babel-plugin-styled-windicss",
+      {
+        "ssr": false,
+        "displayName": false,
+        "transpileTemplateLiterals": true,
+        "minify": false,
+        "cssProp": true
+      }
+    ]
+  ]
+}

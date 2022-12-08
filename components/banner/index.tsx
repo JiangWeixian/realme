@@ -1,6 +1,18 @@
 import { API_URL } from 'lib/constants'
 import React from 'react'
 import trimStart from 'lodash/trimStart'
+import {
+  $foreignObject,
+  $container,
+  $circle,
+  $small,
+  $p,
+  $content,
+  $title,
+  $subtitle,
+  $desc,
+} from './styles'
+import { cssText } from 'lib/format'
 
 type Props = {
   colorA: string
@@ -62,11 +74,7 @@ export const Banner = ({
         dangerouslySetInnerHTML={{
           __html: `
     foreignObject {
-      overflow: hidden;
-      display: inline-block;
-      width: 100%;
-      height: 100%;
-      border-radius: 12px;
+      ${cssText($foreignObject)}
     }
   `,
         }}
@@ -78,56 +86,35 @@ export const Banner = ({
             dangerouslySetInnerHTML={{
               __html: `
       .container {
-        display: flex;
-        align-items: center;
+        ${cssText($container)}
         background: linear-gradient(135deg, ${hash(colorA)} 0%, ${hash(colorB)} 100%);
         width: 800px;
         height: 400px;
-        position: relative;
       }
       .circle {
-        position: absolute;
-        right: -200px;
-        top: -200px;
-        border-radius: 100%;
-        width: 400px;
-        height: 400px;
+        aspect-ratio: 1 / 1;
+        ${cssText($circle)}
         background: ${hash(colorA)};
       }
       .small {
-        position: absolute;
-        left: 100px;
-        top: 80px;
-        width: 50px;
-        height: 50px;
+        ${cssText($small)}
       }
       p {
-        margin: 0px;
-        padding: 0px;
-        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        ${cssText($p)}
       }
       .content {
-        padding: 48px;
-        display: flex;
-        flex-direction: column;
+        ${cssText($content)}
       }
       .title {
-        font-weight: bolder;
-        font-size: 64px;
-        color: white;
-        line-height: 1;
+        ${cssText($title)}
       }
       .subtitle {
         color: ${hash(textColor)};
-        font-size: 24px;
-        font-weight: 600;
+        ${cssText($subtitle)}
       }
       .desc {
         color: ${hash(textColor)};
-        font-size: 16px;
-        font-style: italic;
-        font-weight: normal;
-        margin-top: 12px;
+        ${cssText($desc)}
       }
       `,
             }}
