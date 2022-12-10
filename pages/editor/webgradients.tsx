@@ -12,10 +12,10 @@ const WebGradients = dynamic(() =>
 
 const Page = () => {
   const { webgradients: webgradientsName, ...params } = useControls({
-    title: 'hello',
-    subtitle: 'world',
+    title: 'hello world',
+    subtitle: 'indiehackers',
     desc: {
-      value: 'hello wrold',
+      value: 'happy hacking',
       rows: 3,
     },
     webgradients: {

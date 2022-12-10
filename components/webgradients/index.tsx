@@ -6,14 +6,14 @@ import { cssText } from 'lib/format'
 
 export type WebGradientsProps = {
   title?: string
-  substitle?: string
+  subtitle?: string
   desc?: string
   webgradientsName?: string
 }
 
 export const WebGradients = ({
   title = 'hello world',
-  substitle = 'indiehackers',
+  subtitle = 'indiehackers',
   desc = 'Happy hacking',
   webgradientsName = 'WarmFlame',
 }: WebGradientsProps = {}) => {
@@ -48,7 +48,7 @@ export const WebGradients = ({
       }
     >
       <div className="webgradients">
-        <h2 className="subtitle">{substitle}</h2>
+        <h2 className="subtitle">{subtitle}</h2>
         <h1 className="title">{title}</h1>
         <p className="desc">{desc}</p>
       </div>
