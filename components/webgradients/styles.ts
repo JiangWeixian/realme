@@ -23,7 +23,7 @@ export const $title = css`
 `
 
 export const $desc = css`
-  @apply text-gray-300;
+  @apply text-white font-thin;
 `
 
 export const $subtitle = css`
