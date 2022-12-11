@@ -5,10 +5,11 @@ import { webgradients } from 'styled-webgradients/constants'
 import { Editor } from 'components/editor'
 import { buildUrl } from 'lib/format'
 import dynamic from 'next/dynamic'
+import type { WebGradients as WebGradientsTypes } from 'components/webgradients'
 
 const WebGradients = dynamic(
   () => import('components/webgradients').then((mod) => mod.WebGradients) as any,
-)
+) as typeof WebGradientsTypes
 
 const Page = () => {
   const { webgradients: webgradientsName, ...params } = useControls({

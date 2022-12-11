@@ -5981,10 +5981,10 @@ styled-jsx@5.0.2:
   resolved "https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.0.2.tgz#ff230fd593b737e9e68b630a694d460425478729"
   integrity sha512-LqPQrbBh3egD57NBcHET4qcgshPks+yblyhPlH2GY8oaDgKs8SK4C3dBh3oSJjgzJ3G5t1SYEZGHkP+QEpX9EQ==
 
-styled-webgradients@^2.0.0-0:
-  version "2.0.0-0"
-  resolved "https://registry.npmjs.org/styled-webgradients/-/styled-webgradients-2.0.0-0.tgz#6c0fe125682b60c917b40eee13e0fee2f15722a4"
-  integrity sha512-J2CX1961CHV1jVCEggIey97xcC2V2DG8BHDuBbA4h6NcYYWYx8nzSb8zp8JKRDSAld+F6tKgdriXAaKXwKTv6Q==
+styled-webgradients@2.0.0-2:
+  version "2.0.0-2"
+  resolved "https://registry.npmjs.org/styled-webgradients/-/styled-webgradients-2.0.0-2.tgz#ddf30f7b8c8c06bceedc7a1e4b64ecf6359d396b"
+  integrity sha512-RT4FOXHjlSd/Ca8gBIk4qQWzgrPX5kq0/U2CqS01nE1zv964/k5xDsq3DfsxjcGKvFnnGqnKgdUYEifCJA9CQQ==
 
 supports-color@^5.3.0, supports-color@^5.5.0:
   version "5.5.0"

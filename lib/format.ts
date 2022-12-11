@@ -10,7 +10,7 @@ export const cssText = (source: FlattenSimpleInterpolation) => {
 
 const withoutHash = (str: string) => (str.startsWith('#') ? trimStart(str, '#') : str)
 
-export const buildUrl = (props: Record<string, string | unknown>, endpoints: string) => {
+export const buildUrl = (props: Record<string, any>, endpoints: string) => {
   const params = new URLSearchParams()
   for (const [key, value] of Object.entries(props)) {
     // currently value is always string
