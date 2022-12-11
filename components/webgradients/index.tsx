@@ -1,7 +1,15 @@
 import React from 'react'
 
 import { Svg } from 'components/svg'
-import { $animation, $desc, $subtitle, $title, $webgradients } from './styles'
+import {
+  $animation,
+  $desc,
+  $subtitle,
+  $title,
+  $webgradients,
+  $radialgradients,
+  $webgradientsBg,
+} from './styles'
 import { cssText } from 'lib/format'
 
 export type WebGradientsProps = {
@@ -9,6 +17,7 @@ export type WebGradientsProps = {
   subtitle?: string
   desc?: string
   webgradientsName?: string
+  radialgradiets?: boolean
 }
 
 export const WebGradients = ({
@@ -16,8 +25,11 @@ export const WebGradients = ({
   subtitle = 'indiehackers',
   desc = 'Happy hacking',
   webgradientsName = 'WarmFlame',
+  radialgradiets = false,
 }: WebGradientsProps = {}) => {
-  const $webgradientCss = require('styled-webgradients')[`${webgradientsName}Css`]
+  const gradientCss = radialgradiets
+    ? $radialgradients
+    : require('styled-webgradients')[`${webgradientsName}Css`]
   return (
     <Svg
       style={
@@ -26,12 +38,17 @@ export const WebGradients = ({
             __html: `
       ${$animation}
       .webgradients {
-        animation: move 15s cubic-bezier(.62,0,.45,.99) infinite;
-        ${cssText($webgradientCss)};
-        background-size: 400%;
-      }
-      .webgradients {
         ${cssText($webgradients)}
+      }
+      .webgradients-bg {
+        ${cssText($webgradientsBg)};
+        ${cssText(gradientCss)};
+      }
+      .webgradients-bg {
+        animation: move 30s cubic-bezier(.62,0,.45,.99) infinite;
+        background-size: 120%;
+        width: 120%;
+        height: 120%;
       }
       .title {
         ${cssText($title)}
@@ -48,6 +65,7 @@ export const WebGradients = ({
       }
     >
       <div className="webgradients">
+        <div className="webgradients-bg" />
         <h2 className="subtitle">{subtitle}</h2>
         <h1 className="title">{title}</h1>
         <p className="desc">{desc}</p>

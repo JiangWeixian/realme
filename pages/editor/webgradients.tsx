@@ -22,6 +22,7 @@ const Page = () => {
       value: 'WarmFlame',
       options: webgradients,
     },
+    radialgradiets: false,
   })
   return (
     <Editor buildUrl={() => buildUrl(params, '/webgradients.svg')}>
