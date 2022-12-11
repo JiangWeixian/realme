@@ -3134,11 +3134,6 @@ emoji-regex@^8.0.0:
   resolved "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz#e818fd69ce5ccfcb404594f842963bf53164cc37"
   integrity sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==
 
-emojis-list@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
-  integrity sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
-
 emojis-list@^3.0.0:
   version "3.0.0"
   resolved "https://registry.nlark.com/emojis-list/download/emojis-list-3.0.0.tgz#5570662046ad29e2e916e71aae260abdff4f6a78"
@@ -4525,15 +4520,6 @@ load-yaml-file@^0.2.0:
     pify "^4.0.1"
     strip-bom "^3.0.0"
 
-loader-utils@1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.2.3.tgz#1ff5dc6911c9f0a062531a4c04b609406108c2c7"
-  integrity sha512-fkpz8ejdnEMG3s37wGL07iSBDg99O9D5yflE9RGNH3hRdx9SOwYfnGYdZOUIZitN8E+E2vkq3MUMYMvPYl5ZZA==
-  dependencies:
-    big.js "^5.2.2"
-    emojis-list "^2.0.0"
-    json5 "^1.0.1"
-
 loader-utils@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npm.taobao.org/loader-utils/download/loader-utils-2.0.0.tgz#e4cace5b816d425a166b5f097e10cd12b36064b0"
@@ -4579,11 +4565,6 @@ lodash.invoke@^4.5.2:
   version "4.5.2"
   resolved "https://registry.npmjs.org/lodash.invoke/-/lodash.invoke-4.5.2.tgz#01ca07e470903affa3ffec7ad2ed22723d2f697c"
   integrity sha1-AcoH5HCQOv+j/+x60u0icj0vaXw=
-
-lodash.isempty@4.4.0:
-  version "4.4.0"
-  resolved "https://registry.npmjs.org/lodash.isempty/-/lodash.isempty-4.4.0.tgz#6f86cbedd8be4ec987be9aaf33c9684db1b31e7e"
-  integrity sha1-b4bL7di+TsmHvpqvM8loTbGzHn4=
 
 lodash.isfunction@^3.0.9:
   version "3.0.9"
@@ -6000,13 +5981,10 @@ styled-jsx@5.0.2:
   resolved "https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.0.2.tgz#ff230fd593b737e9e68b630a694d460425478729"
   integrity sha512-LqPQrbBh3egD57NBcHET4qcgshPks+yblyhPlH2GY8oaDgKs8SK4C3dBh3oSJjgzJ3G5t1SYEZGHkP+QEpX9EQ==
 
-styled-webgradients@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/styled-webgradients/-/styled-webgradients-1.0.0.tgz#216d28a185c9076f121aa36f38714447900b4a7d"
-  integrity sha512-WMxKBKYBAEIj88Qgcu81BFiW78MviqJ+D2mWyIUTSskCZ41Pzk7e3tRmBkUnNpSFez5ADenvfbApKT8sDTIMDA==
-  dependencies:
-    loader-utils "1.2.3"
-    lodash.isempty "4.4.0"
+styled-webgradients@2.0.0-2:
+  version "2.0.0-2"
+  resolved "https://registry.npmjs.org/styled-webgradients/-/styled-webgradients-2.0.0-2.tgz#ddf30f7b8c8c06bceedc7a1e4b64ecf6359d396b"
+  integrity sha512-RT4FOXHjlSd/Ca8gBIk4qQWzgrPX5kq0/U2CqS01nE1zv964/k5xDsq3DfsxjcGKvFnnGqnKgdUYEifCJA9CQQ==
 
 supports-color@^5.3.0, supports-color@^5.5.0:
   version "5.5.0"

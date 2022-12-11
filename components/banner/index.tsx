@@ -1,6 +1,4 @@
-import { API_URL } from 'lib/constants'
 import React from 'react'
-import trimStart from 'lodash/trimStart'
 import {
   $foreignObject,
   $container,
@@ -50,7 +48,6 @@ const defaultProps: Props = {
 }
 
 const hash = (str: string) => (str.startsWith('#') ? str : `#${str}`)
-const withoutHash = (str: string) => (str.startsWith('#') ? trimStart(str, '#') : str)
 
 export const Banner = ({
   colorA = defaultProps.colorA,
@@ -124,12 +121,4 @@ export const Banner = ({
       </foreignObject>
     </svg>
   )
-}
-
-export const buildUrl = (props: Props) => {
-  const params = new URLSearchParams()
-  for (const [key, value] of Object.entries(props)) {
-    params.append(key, withoutHash(value))
-  }
-  return `${API_URL}/banner.svg?${params.toString()}`
 }

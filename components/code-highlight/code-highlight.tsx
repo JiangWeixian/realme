@@ -2,7 +2,7 @@ import React from 'react'
 import { renderToString } from 'react-dom/server'
 import Highlight, { defaultProps, Language } from 'prism-react-renderer'
 import theme from 'prism-react-renderer/themes/nightOwl'
-import gradients from 'styled-webgradients/lib/gradients.json'
+import gradients from 'styled-webgradients/raw'
 
 const exampleCode = `
 (function someDemo() {
