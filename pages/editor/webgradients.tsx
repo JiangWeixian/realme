@@ -6,9 +6,9 @@ import { Editor } from 'components/editor'
 import { buildUrl } from 'lib/format'
 import dynamic from 'next/dynamic'
 
-const WebGradients = dynamic(() =>
-  import('components/webgradients').then((mod) => mod.WebGradients),
-) as any
+const WebGradients = dynamic(
+  () => import('components/webgradients').then((mod) => mod.WebGradients) as any,
+)
 
 const Page = () => {
   const { webgradients: webgradientsName, ...params } = useControls({
