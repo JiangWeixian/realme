@@ -22,8 +22,14 @@ export const $webgradientsBg = css`
   @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full -z-1 opacity-90 filter blur-3xl;
 `
 
-// TODO: build radialgradients with different color
-// TODO: much apply styles much better
+export const $radialgradientEffect = css`
+  @apply filter blur-2xl opacity-40;
+`
+
+/**
+ * @description it's a great radial gradient effects
+ * @todo maybe should add it into `styled-webgradients`
+ */
 export const $radialgradients = css`
   --color-gradient-1: #7d7aff;
   --color-gradient-2: #2121e2;
@@ -35,7 +41,6 @@ export const $radialgradients = css`
     radial-gradient(at 73% 44%, var(--color-gradient-2) 0, transparent 54%),
     radial-gradient(at 24% 7%, var(--color-gradient-2) 0, transparent 40%),
     radial-gradient(at 76% 46%, var(--color-gradient-1) 0, transparent 50%);
-  /* TODO: */
   filter: blur(40px);
   opacity: 40%;
 `
