@@ -103,10 +103,16 @@ export const WebGradients = ({
         ${gradientCss}
       }
       .webgradients-bg {
+        background-color: #f8fafc;
         animation: move 30s cubic-bezier(.62,0,.45,.99) infinite;
         background-size: 120%;
         width: 120%;
         height: 120%;
+      }
+      @media (prefers-color-scheme: dark) {
+        .webgradients-bg {
+          background-color: #0f172a;
+        }
       }
       .title {
         ${cssText($title)}
