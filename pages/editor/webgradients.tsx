@@ -26,7 +26,7 @@ const Page = () => {
     radialgradiets: false,
   })
   return (
-    <Editor buildUrl={() => buildUrl(params, '/webgradients.svg')}>
+    <Editor buildUrl={() => buildUrl({ ...params, webgradientsName }, '/webgradients.svg')}>
       <WebGradients {...params} webgradientsName={webgradientsName as string} />
     </Editor>
   )
