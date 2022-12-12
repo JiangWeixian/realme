@@ -1,18 +1,8 @@
-import React from 'react'
-import raw from 'styled-webgradients/raw'
-import { radialGradient, backgrounds } from 'polished'
-import { css } from 'styled-components'
+import React, { useRef } from 'react'
+import { StyledWebGradients } from 'styled-webgradients/utils'
 
 import { Svg } from 'components/svg'
-import {
-  $animation,
-  $desc,
-  $subtitle,
-  $title,
-  $webgradients,
-  $radialgradientEffect,
-  $webgradientsBg,
-} from './styles'
+import { $animation, $desc, $subtitle, $title, $webgradients, $webgradientsBg } from './styles'
 import { cssText } from 'lib/format'
 
 export type WebGradientsProps = {
@@ -23,61 +13,6 @@ export type WebGradientsProps = {
   radialgradiets?: boolean
 }
 
-const buildBackgrounds = (name: string) => {
-  const result = raw.find((item) => {
-    return item.name.split(' ').join('') === name
-  })
-  if (!result) {
-    return ''
-  }
-  const colors = result.group.concat(result.gradient.map((v) => v.color))
-  const [color1, color2, color3] = colors
-  const commons = [
-    radialGradient({
-      colorStops: [`${color1} 0`, 'transparent 21%'],
-      extent: 'at 71% 77%',
-    }),
-    radialGradient({
-      colorStops: [`${color3} 0`, 'transparent 50%'],
-      extent: 'at 36% 47%',
-    }),
-    radialGradient({
-      colorStops: [`${color3} 0`, 'transparent 28%'],
-      extent: 'at 54% 29%',
-    }),
-    radialGradient({
-      colorStops: [`${color1} 0`, 'transparent 53%'],
-      extent: 'at 45% 51%',
-    }),
-    radialGradient({
-      colorStops: [`${color2} 0`, 'transparent 54%'],
-      extent: 'at 73% 44%',
-    }),
-    radialGradient({
-      colorStops: [`${color2} 0`, 'transparent 40%'],
-      extent: 'at 24% 7%',
-    }),
-    radialGradient({
-      colorStops: [`${color1} 0`, 'transparent 50%'],
-      extent: 'at 75% 46%',
-    }),
-  ]
-  const randoms = colors.slice(3).map((v) => {
-    return radialGradient({
-      colorStops: [`${v} 0`, 'transparent 50%'],
-      extent: `at ${Math.floor(Math.random() * 100)}% ${Math.floor(Math.random() * 100)}%`,
-    })
-  })
-  return css(
-    backgrounds(
-      ...(commons.concat(randoms).map((v) => {
-        return v.backgroundImage
-      }) as string[]),
-    ),
-    cssText($radialgradientEffect),
-  )
-}
-
 export const WebGradients = ({
   title = 'hello world',
   subtitle = 'indiehackers',
@@ -85,9 +20,10 @@ export const WebGradients = ({
   webgradientsName = 'WarmFlame',
   radialgradiets = false,
 }: WebGradientsProps = {}) => {
+  const ss = useRef(new StyledWebGradients())
   const gradientCss = radialgradiets
-    ? buildBackgrounds(webgradientsName)
-    : require('styled-webgradients')[`${webgradientsName}Css`]
+    ? ss.current.unstable_buildRadialGradient(webgradientsName as any)
+    : ss.current.buildLinearGradient(webgradientsName as any)
   return (
     <Svg
       style={
@@ -100,7 +36,7 @@ export const WebGradients = ({
       }
       .webgradients-bg {
         ${cssText($webgradientsBg)}
-        ${gradientCss}
+        ${cssText(gradientCss)}
       }
       .webgradients-bg {
         background-color: #f8fafc;
