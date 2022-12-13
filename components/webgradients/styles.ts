@@ -22,10 +22,6 @@ export const $webgradientsBg = css`
   @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full -z-1 opacity-90 filter blur-3xl;
 `
 
-export const $radialgradientEffect = css`
-  @apply filter blur-2xl opacity-40;
-`
-
 /**
  * @description it's a great radial gradient effects
  * @todo maybe should add it into `styled-webgradients`
