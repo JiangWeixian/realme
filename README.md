@@ -19,7 +19,7 @@ _github readme component api kit_
 
 ```md
 ![banner](
-  https://realme-ten.vercel.app/api/v1/banner
+  https://realme-ten.vercel.app/api/v1/banner.svg
   ?colorA=831843
   &colorB=be185d
   &textColor=f472b6
@@ -33,9 +33,9 @@ _github readme component api kit_
 <div align='center'>
 
 
-![banner](https://realme-ten.vercel.app/api/v1/banner?colorA=831843&colorB=be185d&textColor=f472b6&title=World!&subtitle=Hello)
+![banner](https://realme-ten.vercel.app/api/v1/banner.svg?colorA=831843&colorB=be185d&textColor=f472b6&title=World!&subtitle=Hello)
 
-_▲ banner_ / [demo](./docs/code-highlight.md)
+_▲ banner_ / [play](https://realme-ten.vercel.app/editor/hero)
 
 </div>
 
@@ -55,6 +55,41 @@ _▲ banner_ / [demo](./docs/code-highlight.md)
 
 
 </details>
+
+### `webgradients`
+
+```md
+![webgradients](
+  https://realme-ten.vercel.app/api/v1/webgradients.svg
+  ?title=hello+world
+  &subtitle=indiehackers
+  &desc=happy+hacking
+  &radialgradiets=true
+  &webgradientsName=HappyFisher
+```
+
+👇
+
+<div align='center'>
+
+
+![webgradients](https://realme-ten.vercel.app/api/v1/webgradients.svg?title=hello+world&subtitle=indiehackers&desc=happy+hacking&radialgradiets=true&webgradientsName=HappyFisher)
+
+_▲ webgradients / [play](https://realme-ten.vercel.app/editor/webgradients)
+
+</div>
+
+# 
+<div align='right'>
+
+*built with ❤️ by username*
+
+</div>
+
+<details>
+
+<summary>unstable</summary>
+<p>
 
 ### `code-highlight`
 
@@ -118,3 +153,8 @@ _▲ sliders_ / [demo](./docs/sliders.md)
 | props | siders props remote raw url | string |    -    | true     |
 
 </details>
+
+
+</p>
+</details>
+

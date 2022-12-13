@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { StyledWebGradients } from 'styled-webgradients/utils'
 
 import { Svg } from 'components/svg'
@@ -13,6 +13,8 @@ export type WebGradientsProps = {
   radialgradiets?: boolean
 }
 
+const sw = new StyledWebGradients()
+
 export const WebGradients = ({
   title = 'hello world',
   subtitle = 'indiehackers',
@@ -20,10 +22,9 @@ export const WebGradients = ({
   webgradientsName = 'WarmFlame',
   radialgradiets = false,
 }: WebGradientsProps = {}) => {
-  const ss = useRef(new StyledWebGradients())
   const gradientCss = radialgradiets
-    ? ss.current.unstable_buildRadialGradient(webgradientsName as any)
-    : ss.current.buildLinearGradient(webgradientsName as any)
+    ? sw.unstable_buildRadialGradient(webgradientsName as any)
+    : sw.buildLinearGradient(webgradientsName as any)
   return (
     <Svg
       style={
