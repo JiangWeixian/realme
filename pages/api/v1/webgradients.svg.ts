@@ -7,11 +7,11 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { subtitle, title, desc, webgradientsName, radialgradiets } =
       req.query as WebGradientsProps
-    const banner = renderToString(
+    const raw = renderToString(
       WebGradients({ subtitle, title, desc, webgradientsName, radialgradiets }),
     )
     res.setHeader('Content-Type', 'image/svg+xml')
-    res.status(200).end(banner)
+    res.status(200).end(raw)
   } catch (err: any) {
     res.status(404).json({ statusCode: 404, message: err.message })
   }
