@@ -59,6 +59,29 @@ _▲ webgradients_ / [playground](https://realme-ten.vercel.app/editor/webgradie
 
 </div>
 
+### `typical`
+
+```md
+![typical](
+  https://realme-ten.vercel.app/api/v1/typical.svg
+  ?steps=hello
+  &steps=1000
+  &steps=hello%20world
+  &steps=500
+  &steps=hello%20realme
+```
+
+👇
+
+<div align='center'>
+
+
+![typical](https://realme-ten.vercel.app/api/v1/typical.svg?steps=hello&steps=1000&steps=hello%20world&steps=500&steps=hello%20realme)
+
+_▲ typical_ / [playground](https://realme-ten.vercel.app/editor/typical)
+
+</div>
+
 # 
 <div align='right'>
 
