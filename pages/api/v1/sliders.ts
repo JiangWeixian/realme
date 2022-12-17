@@ -15,7 +15,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const sliders = Sliders(props)
     res.setHeader('Content-Type', 'image/svg+xml')
     res.status(200).end(sliders)
-  } catch (err) {
-    res.status(404).json({ statusCode: 404, message: err.message })
+  } catch (err: unknown) {
+    res.status(404).json({ statusCode: 404, message: (err as Error).message })
   }
 }

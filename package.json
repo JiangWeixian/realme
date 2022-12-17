@@ -27,11 +27,12 @@
     "next": "12.1.6",
     "polished": "^4.2.2",
     "prism-react-renderer": "^1.2.1",
+    "query-string": "^8.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.0",
     "styled-components": "^5.3.0",
-    "styled-webgradients": "2.0.0-4",
+    "styled-webgradients": "2.0.0",
     "three": "^0.147.0",
     "three-stdlib": "^2.20.2"
   },
@@ -48,11 +49,12 @@
     "babel-plugin-styled-windicss": "^1.0.1",
     "cz-emoji": "^1.3.1",
     "eslint": "^8.14.0",
+    "esno": "^0.16.3",
     "husky": "3.x",
     "next-images": "^1.8.1",
     "prettier": "^2.3.2",
     "tailwindcss": "3.2.4",
-    "typescript": "4.3.2"
+    "typescript": "4.6.4"
   },
   "config": {
     "commitizen": {

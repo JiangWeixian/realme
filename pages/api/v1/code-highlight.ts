@@ -27,7 +27,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res
       .status(200)
       .end(CodeHighlight({ code, language: seqs[seqs.length - 1] as Language, title, height, bg }))
-  } catch (err) {
-    res.status(404).json({ statusCode: 404, message: err.message })
+  } catch (err: unknown) {
+    res.status(404).json({ statusCode: 404, message: (err as Error).message })
   }
 }
