@@ -15,6 +15,7 @@ import { a, easings, useSpring, useSprings } from '@react-spring/three'
 import styled, { createGlobalStyle } from 'styled-components'
 
 import Github from 'assets/github.svg'
+import { SEO } from '@/components/seo'
 
 const REPO_URL = 'https://github.com/JiangWeixian/realme'
 
@@ -161,6 +162,7 @@ const Scene = () => {
 
 const IndexPage = () => (
   <Layout title="realme">
+    <SEO />
     {/* @ts-expect-error - FIXME: releted to react version */}
     <GlobalStyle />
     <Scene />

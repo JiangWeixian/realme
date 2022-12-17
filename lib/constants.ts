@@ -1,1 +1,2 @@
+export const HOST = process.env.NODE_ENV === 'development' ? `http://localhost:3000` : `https://realme-ten.vercel.app`
 export const API_URL = process.env.NODE_ENV === 'development' ? `http://localhost:3000/api/v1` : `https://realme-ten.vercel.app/api/v1`
