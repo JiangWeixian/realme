@@ -25,6 +25,10 @@
     "lodash": "^4.17.21",
     "maath": "^0.4.2",
     "next": "12.1.6",
+    "next-mdx-remote": "^4.2.0",
+    "nextjs-cors": "^2.1.2",
+    "ofetch": "^1.0.0",
+    "ohmyfetch": "^0.4.21",
     "polished": "^4.2.2",
     "prism-react-renderer": "^1.2.1",
     "query-string": "^8.0.3",
@@ -34,7 +38,8 @@
     "styled-components": "^5.3.0",
     "styled-webgradients": "2.0.0",
     "three": "^0.147.0",
-    "three-stdlib": "^2.20.2"
+    "three-stdlib": "^2.20.2",
+    "windicss": "^3.5.6"
   },
   "devDependencies": {
     "@aiou/eslint-config": "^0.5.1",
@@ -50,6 +55,7 @@
     "cz-emoji": "^1.3.1",
     "eslint": "^8.14.0",
     "esno": "^0.16.3",
+    "esrua": "^0.2.1",
     "husky": "3.x",
     "next-images": "^1.8.1",
     "prettier": "^2.3.2",

@@ -82,6 +82,25 @@ _▲ typical_ / [playground](https://realme-ten.vercel.app/editor/typical)
 
 </div>
 
+### `mdx`
+
+```md
+![mdx](
+  https://realme-ten.vercel.app/api/v1/mdx.svg
+  ?remoteContent=https://ungh.cc/repos/JiangWeixian/realme/files/master/docs/mdx.mdx
+```
+
+👇
+
+<div align='center'>
+
+
+![mdx](https://realme-ten.vercel.app/api/v1/mdx.svg?remoteContent=https://ungh.cc/repos/JiangWeixian/realme/files/master/docs/mdx.mdx)
+
+_▲ mdx_ / playground
+
+</div>
+
 # 
 <div align='right'>
 
