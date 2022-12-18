@@ -13,16 +13,20 @@ function Content({ source }: { source: MDXRemoteProps }) {
   )
 }
 
-type MDXProps = {
+export type MDXProps = {
   rawContent: string
   rawStyle: string
+  width: number | string
+  height: number | string
 }
 
-export const MDX = ({ rawStyle, rawContent }: MDXProps) => {
+export const MDX = ({ rawStyle, rawContent, width, height }: MDXProps) => {
   return (
     <Svg
       type="normal"
-      responsive={true}
+      width={width}
+      height={height}
+      responsive={false}
       style={
         <style
           dangerouslySetInnerHTML={{
