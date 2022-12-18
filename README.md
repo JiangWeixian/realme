@@ -82,7 +82,24 @@ _▲ typical_ / [playground](https://realme-ten.vercel.app/editor/typical)
 
 </div>
 
-![typical](http://localhost:3000/api/v1/mdx.svg)
+### `mdx`
+
+```md
+![mdx](
+  https://realme-ten.vercel.app/api/v1/mdx.svg
+  ?remoteContent=https://ungh.cc/repos/neo-hack/docs/files/master/docs/guide/get-started.md
+```
+
+👇
+
+<div align='center'>
+
+
+![mdx](http://localhost:3000/api/v1/mdx.svg?remoteContent=https://ungh.cc/repos/neo-hack/docs/files/master/docs/guide/get-started.md)
+
+_▲ typical_ / playground
+
+</div>
 
 # 
 <div align='right'>

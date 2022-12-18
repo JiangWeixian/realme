@@ -1,0 +1,30 @@
+### `mdx.svg`
+
+`/api/v1/mdx.svg` is useful to render remote `.mdx` or `.md` file content in prettier style. e.g.
+
+```md
+![mdx](
+  https://realme-ten.vercel.app/api/v1/mdx.svg
+  ?remoteContent=https://ungh.cc/repos/neo-hack/docs/files/master/docs/guide/get-started.md
+```
+
+By default, content will styled by [windicss/typograhy](https://windicss.org/plugins/official/typography.html). In ligth mode, use `bg-slate-50` as background, and in dark mode, use `bg-slate-900` as background.
+
+You can use valid [windicss](https://windicss.org/) classnames in `.mdx` files. e.g.
+
+```tsx
+<button class="ring-2 ring-pink-500 ring-inset">
+  Hello, realme
+</button>
+```
+
+<button class="ring-2 ring-pink-500 ring-inset">
+  Hello, realme
+</button>
+
+There are some limitations before use:
+
+1. You can not import third part library
+2. In the backend, content inside `remoteContent` should render in server side safely. 
+3. Currently, it use [ungh](https://github.com/unjs/ungh) to fetch remote github markdown content. Other urls format is still under development.
+4. API `/api/v1/mdx.svg` still in heavily development, params maybe changed in the future.
