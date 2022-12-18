@@ -5,10 +5,13 @@ import { $container, $foreignObject, $foreignHeroObject } from './styles'
 
 type SvgProps = {
   children?: React.ReactNode
+  /**
+   * @description Insert style into .container
+   */
   style?: React.ReactNode
   type?: 'hero' | 'normal'
-  width: number | string
-  height: number | string
+  width?: number | string
+  height?: number | string
   /**
    * @description svg size will responsive with parent element, parent element require define
    * width & height

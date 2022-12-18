@@ -28,7 +28,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const {
       width,
       height,
-      remoteContent = 'https://ungh.cc/repos/neo-hack/docs/files/master/docs/guide/get-started.md',
+      remoteContent = 'https://ungh.cc/repos/JiangWeixian/realme/files/master/docs/mdx.mdx',
     } = req.query as MDXProps & { remoteContent: string }
     const text: UnGhFile = await ofetch(remoteContent, {
       method: 'GET',

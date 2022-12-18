@@ -26,7 +26,7 @@ export const MDX = ({ rawStyle, rawContent, width, height }: MDXProps) => {
       type="normal"
       width={width}
       height={height}
-      responsive={true}
+      responsive={false}
       style={
         <style
           dangerouslySetInnerHTML={{
