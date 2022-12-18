@@ -81,13 +81,13 @@ _▲ webgradients_ / [playground](https://realme-ten.vercel.app/editor/webgradie
 _▲ typical_ / [playground](https://realme-ten.vercel.app/editor/typical)
 
 </div>
-
+https://realme-ebfib9fmq-jiangweixian1994.vercel.app/
 ### `mdx`
 
 ```md
 ![mdx](
-  https://realme-ten.vercel.app/api/v1/mdx.svg
-  ?remoteContent=https://ungh.cc/repos/neo-hack/docs/files/master/docs/guide/get-started.md
+  https://realme-ebfib9fmq-jiangweixian1994.vercel.app/api/v1/mdx.svg
+  ?remoteContent=https://ungh.cc/repos/JiangWeixian/realme/files/feat/mdx/docs/mdx.mdx
 ```
 
 👇
