@@ -3,7 +3,7 @@ import React from 'react'
 import { cssText } from 'lib/format'
 import { $container, $foreignObject, $foreignHeroObject } from './styles'
 
-type SvgProps = {
+export type SvgProps = {
   children?: React.ReactNode
   /**
    * @description Insert style into .container
@@ -14,7 +14,7 @@ type SvgProps = {
   height?: number | string
   /**
    * @description svg size will responsive with parent element, parent element require define
-   * width & height
+   * width & height. Used to preview svg in chrome tab.
    */
   responsive?: boolean
 }

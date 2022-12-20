@@ -3,7 +3,7 @@ import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { serialize } from 'next-mdx-remote/serialize'
 
-import { Svg } from 'components/svg'
+import { Svg, SvgProps } from 'components/svg'
 
 function Content({ source }: { source: MDXRemoteProps }) {
   return (
@@ -16,17 +16,15 @@ function Content({ source }: { source: MDXRemoteProps }) {
 export type MDXProps = {
   rawContent: string
   rawStyle: string
-  width: number | string
-  height: number | string
-}
+} & Pick<SvgProps, 'width' | 'height' | 'responsive'>
 
-export const MDX = ({ rawStyle, rawContent, width, height }: MDXProps) => {
+export const MDX = ({ rawStyle, rawContent, width, height, responsive = false }: MDXProps) => {
   return (
     <Svg
       type="normal"
       width={width}
       height={height}
-      responsive={false}
+      responsive={responsive}
       style={
         <style
           dangerouslySetInnerHTML={{

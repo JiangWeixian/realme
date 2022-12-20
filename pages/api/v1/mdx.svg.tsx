@@ -29,13 +29,14 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       width,
       height,
       remoteContent = 'https://ungh.cc/repos/JiangWeixian/realme/files/master/docs/mdx.mdx',
-    } = req.query as MDXProps & { remoteContent: string }
+      responsive = true,
+    } = req.query as unknown as MDXProps & { remoteContent: string }
     const text: UnGhFile = await ofetch(remoteContent, {
       method: 'GET',
     })
     const rawContent = await renderContent({ source: text.file.contents })
     const rawStyle = generateStyles(rawContent)
-    const raw = renderToString(MDX({ rawContent, rawStyle, width, height }))
+    const raw = renderToString(MDX({ rawContent, rawStyle, width, height, responsive }))
     res.setHeader('Content-Type', 'image/svg+xml')
     res.status(200).end(raw)
   } catch (err: any) {
