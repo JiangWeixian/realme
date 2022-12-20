@@ -29,7 +29,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       width,
       height,
       remoteContent = 'https://ungh.cc/repos/JiangWeixian/realme/files/master/docs/mdx.mdx',
-      responsive = true,
+      responsive = false,
     } = req.query as unknown as MDXProps & { remoteContent: string }
     const text: UnGhFile = await ofetch(remoteContent, {
       method: 'GET',
