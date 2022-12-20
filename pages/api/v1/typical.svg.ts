@@ -8,6 +8,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { steps } = req.query as TypicalProps
     const raw = renderToString(Typical({ steps: normalizeSteps(steps) }))
+    res.setHeader('Cache-Control', 'stale-while-revalidate=3600, max-age=3600')
     res.setHeader('Content-Type', 'image/svg+xml')
     res.status(200).end(raw)
   } catch (err: any) {
