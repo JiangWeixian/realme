@@ -37,6 +37,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const rawContent = await renderContent({ source: text.file.contents })
     const rawStyle = generateStyles(rawContent)
     const raw = renderToString(MDX({ rawContent, rawStyle, width, height, responsive }))
+    res.setHeader('Cache-Control', 'stale-while-revalidate=60, max-age=60')
     res.setHeader('Content-Type', 'image/svg+xml')
     res.status(200).end(raw)
   } catch (err: any) {
