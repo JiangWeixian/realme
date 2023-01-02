@@ -19,6 +19,11 @@ a {
   box-sizing: border-box;
 }
 
+.box {
+  box-shadow: 0px 0px 0px 1px #000;
+  border: 1px solid #333333;
+}
+
 .bg-grid {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(51 65 85 / 0.25)'><path d='M0 .5H31.5V32'/></svg>");
 }
