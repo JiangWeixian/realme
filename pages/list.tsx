@@ -51,7 +51,7 @@ const List = () => {
         {wigets.map((wiget) => {
           return (
             <div className="rounded-lg" key={wiget.name}>
-              <div className="rounded-lg shadow-lg ring ring-transparent hover:ring-blue-400/70 ring-offset-4 dark:ring-offset-slate-900 h-fit">
+              <div className="rounded-lg shadow-lg aspect-[2/1] ring ring-transparent hover:ring-blue-400/70 ring-offset-4 dark:ring-offset-slate-900 h-fit">
                 <img src={`${API_URL}${wiget.url}`} alt={wiget.name} />
               </div>
               <div className="flex items-center mt-4 cursor-pointer">
