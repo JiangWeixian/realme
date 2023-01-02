@@ -3270,6 +3270,11 @@ detective@^5.2.1:
     defined "^1.0.0"
     minimist "^1.2.6"
 
+devices.css@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/devices.css/-/devices.css-0.2.0.tgz#02e5a104b93f8d1b65da1a58ffd5d2d7e000b287"
+  integrity sha512-CE59M+4PuH87+A4clpC1xA/lkfCSGFWfeFx5sNadDdy1kXUqJ28SdTp+tBlwkHfI7G+h/Wf4Ddt9QGPLLlky3Q==
+
 didyoumean@^1.2.2:
   version "1.2.2"
   resolved "https://registry.npmjs.org/didyoumean/-/didyoumean-1.2.2.tgz#989346ffe9e839b4555ecf5666edea0d3e8ad037"

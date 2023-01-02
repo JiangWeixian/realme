@@ -13,6 +13,7 @@ import { Line2 } from 'three-stdlib'
 import { inSphere } from 'maath/random'
 import { a, easings, useSpring, useSprings } from '@react-spring/three'
 import styled, { createGlobalStyle } from 'styled-components'
+import { useRouter } from 'next/router'
 
 import Github from 'assets/github.svg'
 import { SEO } from '@/components/seo'
@@ -46,6 +47,7 @@ const halfExtent = { x: 4.7, y: 0.8, z: 0 }
 const lines = new Array(5).fill(0).map((_, i) => i)
 
 const Main = () => {
+  const router = useRouter()
   const linesRef = useRef(new Map<number, Line2>())
   const [rotate, rotateApi] = useSpring(() => ({ y: 0 }))
   const [springs, api] = useSprings(lines.length, () => ({
@@ -72,7 +74,7 @@ const Main = () => {
         onPointerEnter={handlePointerEnter}
         onPointerLeave={handlePointerLeave}
         onClick={() => {
-          window.open(REPO_URL, '_blank', 'noopener')
+          router.push('/list')
         }}
       >
         <meshBasicMaterial color={[1.25, 1.25, 1.25]} />

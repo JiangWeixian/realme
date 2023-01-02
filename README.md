@@ -101,10 +101,52 @@ _▲ mdx_ / playground
 
 </div>
 
+### `devices`
+
+```md
+![devices-iphonex](
+  https://realme-ten.vercel.app/api/v1/devices.svg
+  ?webgradientsName=BlueVelvet
+  &width=800&height=400
+  &type=iphonex
+  &imgSrc=https://images.unsplash.com/photo-1527842891421-42eec6e703ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80
+```
+
+👇
+
+<div align='center'>
+
+
+![devices-iphonex](https://realme-ten.vercel.app/api/v1/devices.svg?webgradientsName=BlueVelvet&width=800&height=400&type=iphonex&imgSrc=https://images.unsplash.com/photo-1527842891421-42eec6e703ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80)
+
+_▲ devices_ / playground
+
+</div>
+
+```md
+![devices-ipadpro](
+  https://realme-ten.vercel.app/api/v1/devices.svg
+  ?webgradientsName=BlueVelvet
+  &width=800&height=400
+  &type=ipadpro
+  &imgSrc=https://images.unsplash.com/photo-1527842891421-42eec6e703ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80
+```
+
+👇
+
+<div align='center'>
+
+
+![devices-ipadpro](https://realme-ten.vercel.app/api/v1/devices.svg?webgradientsName=BlueVelvet&width=800&height=400&type=ipadpro&imgSrc=https://images.unsplash.com/photo-1527842891421-42eec6e703ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80)
+
+_▲ devices_ / playground
+
+</div>
+
 # 
 <div align='right'>
 
-*built with ❤️ by username*
+*built with ❤️ by jiangweixian*
 
 </div>
 
