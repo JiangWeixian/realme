@@ -5,10 +5,10 @@ import { WebGradients, WebGradientsProps } from 'components/webgradients'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const { subtitle, title, desc, webgradientsName, radialgradiets } =
+    const { subtitle, title, desc, webgradientsName, radialgradiets, width, height } =
       req.query as WebGradientsProps
     const raw = renderToString(
-      WebGradients({ subtitle, title, desc, webgradientsName, radialgradiets }),
+      WebGradients({ subtitle, title, desc, webgradientsName, radialgradiets, width, height }),
     )
     res.setHeader('Cache-Control', 'stale-while-revalidate=3600, max-age=3600')
     res.setHeader('Content-Type', 'image/svg+xml')

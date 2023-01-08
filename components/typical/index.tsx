@@ -4,7 +4,7 @@ import React from 'react'
 
 import { Svg } from 'components/svg'
 import { $typical, $character, $word } from './styles'
-import { cssText } from 'lib/format'
+import { cssText, responsiveTextSize } from 'lib/format'
 
 const speed = 60
 
@@ -113,6 +113,8 @@ const toAnimations = (map: Record<string, Item>) => {
 
 export type TypicalProps = {
   steps: (string | number)[]
+  width?: string
+  height?: string
 }
 
 export const Typical = (props: TypicalProps) => {
@@ -130,6 +132,8 @@ export const Typical = (props: TypicalProps) => {
   })
   return (
     <Svg
+      width={props.width}
+      height={props.height}
       style={
         <style
           dangerouslySetInnerHTML={{
@@ -197,6 +201,7 @@ export const Typical = (props: TypicalProps) => {
         ${cssText($character)}
         max-width: 0px;
         border-right: 1px solid transparent;
+        font-size: ${responsiveTextSize({ current: props.width, target: 800, base: 18 })}
       }
       `,
           }}

@@ -33,3 +33,7 @@ export const normalizeSteps = (steps: (string | number)[]) => {
     return Number(v)
   })
 }
+
+export const responsiveTextSize = ({ current, target, base }: { current?: number | string, target: number, base: number }) => {
+  return `${(Number(current ?? target) / target) * base}px`
+}

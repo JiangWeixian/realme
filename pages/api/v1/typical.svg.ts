@@ -6,8 +6,8 @@ import { normalizeSteps } from 'lib/format'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const { steps } = req.query as TypicalProps
-    const raw = renderToString(Typical({ steps: normalizeSteps(steps) }))
+    const { steps, width, height } = req.query as TypicalProps
+    const raw = renderToString(Typical({ steps: normalizeSteps(steps), width, height }))
     res.setHeader('Cache-Control', 'stale-while-revalidate=3600, max-age=3600')
     res.setHeader('Content-Type', 'image/svg+xml')
     res.status(200).end(raw)

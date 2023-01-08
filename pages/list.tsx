@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import useMeasure from 'react-use-measure'
 
 import { API_URL } from 'lib/constants'
 import Docs from 'assets/docs.svg'
@@ -38,6 +39,18 @@ const wigets = [
   },
 ]
 
+const RealmeImage = ({ src, name }: { src: string; name: string }) => {
+  const [ref, bounds] = useMeasure()
+  return (
+    <div
+      ref={ref}
+      className="rounded-lg shadow-lg overflow-y-auto ring ring-transparent hover:ring-blue-400/70 ring-offset-4 dark:ring-offset-slate-900 w-full h-full"
+    >
+      <img src={`${src}&width=${bounds.width}&height=${bounds.height}`} alt={name} />
+    </div>
+  )
+}
+
 const List = () => {
   return (
     <div className="flex flex-col items-center justify-center w-screen min-h-screen bg-slate-50 dark:bg-slate-900 overflow-x-hidden overflow-y-auto py-4 pt-12">
@@ -50,10 +63,8 @@ const List = () => {
       <div className="grid grid-cols-2 gap-8 py-4 w-10/12 min-h-screen">
         {wigets.map((wiget) => {
           return (
-            <div className="rounded-lg" key={wiget.name}>
-              <div className="rounded-lg shadow-lg aspect-[2/1] overflow-y-auto ring ring-transparent hover:ring-blue-400/70 ring-offset-4 dark:ring-offset-slate-900 h-fit">
-                <img src={`${API_URL}${wiget.url}`} alt={wiget.name} />
-              </div>
+            <div className="rounded-lg w-full aspect-[2/1] overflow-hidden" key={wiget.name}>
+              <RealmeImage src={`${API_URL}${wiget.url}`} alt={wiget.name} />
               <div className="flex items-center mt-4 cursor-pointer">
                 {wiget.docs && (
                   <a href={wiget.docs} rel="noopener noreferrer" target="_blank">

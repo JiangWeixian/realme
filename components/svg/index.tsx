@@ -19,11 +19,14 @@ export type SvgProps = {
   responsive?: boolean
 }
 
+const withPx = (str?: string | number, fallback?: string) =>
+  str && !str.toString().endsWith('px') ? `${str}px` : fallback
+
 export const Svg = ({ type = 'hero', ...props }: SvgProps) => {
   return (
     <svg
-      width={props.responsive ? undefined : props.width ?? '800px'}
-      height={props.responsive ? undefined : props.height ?? '400px'}
+      width={props.responsive ? undefined : withPx(props.width, '800px')}
+      height={props.responsive ? undefined : withPx(props.height, '400px')}
       viewBox={
         props.responsive
           ? undefined
@@ -41,14 +44,14 @@ export const Svg = ({ type = 'hero', ...props }: SvgProps) => {
           __html: `
     foreignObject {
       ${cssText($foreignObject)}
-      ${props.responsive ? `width: 100%;` : `width: ${props.width ?? '800px'};`}
-      ${props.responsive ? `height: 100%;` : `height: ${props.height ?? '400px'};`}
+      ${props.responsive ? `width: 100%;` : `width: ${withPx(props.width, '800px')};`}
+      ${props.responsive ? `height: 100%;` : `height: ${withPx(props.height, '400px')};`}
       ${type === 'hero' ? cssText($foreignHeroObject) : ''}
     }
     .container {
       ${cssText($container)}
-      ${props.responsive ? `width: 100%;` : `width: ${props.width ?? '800px'};`}
-      ${props.responsive ? `height: 100%;` : `height: ${props.height ?? '400px'};`}
+      ${props.responsive ? `width: 100%;` : `width: ${withPx(props.width, '800px')};`}
+      ${props.responsive ? `height: 100%;` : `height: ${withPx(props.height, '400px')};`}
     }
   `,
         }}
