@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV === 'development') {
+  console.log('info  - lanUrl:', `http://${require('address').ip()}:3000`)
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   swcMinify: true,

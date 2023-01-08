@@ -52,6 +52,7 @@
     "@types/react-dom": "^18.0.9",
     "@types/styled-components": "^5.1.10",
     "@types/three": "^0.146.0",
+    "address": "^1.2.2",
     "babel-plugin-styled-windicss": "^1.0.1",
     "cz-emoji": "^1.3.1",
     "eslint": "^8.14.0",

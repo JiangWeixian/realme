@@ -41,10 +41,14 @@ export const Svg = ({ type = 'hero', ...props }: SvgProps) => {
           __html: `
     foreignObject {
       ${cssText($foreignObject)}
+      ${props.responsive ? `width: 100%;` : `width: ${props.width ?? '800px'};`}
+      ${props.responsive ? `height: 100%;` : `height: ${props.height ?? '400px'};`}
       ${type === 'hero' ? cssText($foreignHeroObject) : ''}
     }
     .container {
       ${cssText($container)}
+      ${props.responsive ? `width: 100%;` : `width: ${props.width ?? '800px'};`}
+      ${props.responsive ? `height: 100%;` : `height: ${props.height ?? '400px'};`}
     }
   `,
         }}

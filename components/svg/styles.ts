@@ -1,7 +1,7 @@
 import { css } from 'styled-components'
 
 export const $foreignObject = css`
-  @apply inline w-full h-full overflow-hidden font-sans;
+  @apply inline overflow-hidden font-sans;
 `
 
 export const $foreignHeroObject = css`
@@ -9,5 +9,5 @@ export const $foreignHeroObject = css`
 `
 
 export const $container = css`
-  @apply relative w-full h-full;
+  @apply relative;
 `
