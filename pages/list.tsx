@@ -9,7 +9,7 @@ import Editor from 'assets/editor.svg'
 const wigets = [
   {
     name: 'banner',
-    editor: '/editor/banner',
+    editor: '/editor/hero',
     url: '/banner.svg?colorA=831843&colorB=be185d&textColor=f472b6&title=World!&subtitle=Hello',
   },
   {
@@ -44,7 +44,7 @@ const RealmeImage = ({ src, name }: { src: string; name: string }) => {
   return (
     <div
       ref={ref}
-      className="rounded-lg shadow-lg overflow-y-auto ring ring-transparent hover:ring-blue-400/70 ring-offset-4 dark:ring-offset-slate-900 w-full h-full"
+      className="rounded-lg shadow-lg aspect-[2/1] overflow-y-auto ring ring-transparent hover:ring-blue-400/70 ring-offset-4 dark:ring-offset-slate-900 w-full"
     >
       <img src={`${src}&width=${bounds.width}&height=${bounds.height}`} alt={name} />
     </div>
@@ -63,7 +63,7 @@ const List = () => {
       <div className="grid grid-cols-2 grid-rows-3 gap-8 py-4 w-10/12">
         {wigets.map((wiget) => {
           return (
-            <div className="rounded-lg aspect-[2/1] overflow-hidden" key={wiget.name}>
+            <div className="rounded-lg overflow-hidden" key={wiget.name}>
               <RealmeImage src={`${API_URL}${wiget.url}`} name={wiget.name} />
               <div className="flex items-center mt-4 cursor-pointer">
                 {wiget.docs && (
