@@ -50,5 +50,5 @@ export const $desc = css`
 `
 
 export const $subtitle = css`
-  @apply text-white text-lg font-semibold m-0 p-0;
+  @apply text-white font-semibold m-0 p-0;
 `
