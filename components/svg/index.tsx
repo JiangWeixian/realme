@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { cssText } from 'lib/format'
+import { cssText, responsiveTextSize } from 'lib/format'
 import { $container, $foreignObject, $foreignHeroObject } from './styles'
 
 export type SvgProps = {
@@ -42,6 +42,9 @@ export const Svg = ({ type = 'hero', ...props }: SvgProps) => {
       <style
         dangerouslySetInnerHTML={{
           __html: `
+    :root {
+      font-size: ${responsiveTextSize({ current: props.width, target: 800, base: 16 })}
+    }
     foreignObject {
       ${cssText($foreignObject)}
       ${props.responsive ? `width: 100%;` : `width: ${withPx(props.width, '800px')};`}

@@ -1,7 +1,7 @@
 import { css } from 'styled-components'
 
 export const $typical = css`
-  @apply relative text-slate-100 w-full h-full bg-black font-mono;
+  @apply relative text-slate-100 text-2xl w-full h-full bg-black font-mono;
 `
 
 export const $word = css`

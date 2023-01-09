@@ -1,9 +1,9 @@
 import React from 'react'
 import { StyledWebGradients } from 'styled-webgradients/utils'
 
-import { Svg } from 'components/svg'
+import { Svg, SvgProps } from 'components/svg'
 import { $animation, $desc, $subtitle, $title, $webgradients, $webgradientsBg } from './styles'
-import { cssText, responsiveTextSize } from 'lib/format'
+import { cssText } from 'lib/format'
 
 export type WebGradientsProps = {
   title?: string
@@ -11,9 +11,7 @@ export type WebGradientsProps = {
   desc?: string
   webgradientsName?: string
   radialgradiets?: boolean
-  width?: string
-  height?: string
-}
+} & Pick<SvgProps, 'width' | 'height'>
 
 const sw = new StyledWebGradients()
 
@@ -59,15 +57,12 @@ export const WebGradients = ({
       }
       .title {
         ${cssText($title)}
-        font-size: ${responsiveTextSize({ current: width, target: 800, base: 60 })}
       }
       .subtitle {
         ${cssText($subtitle)}
-        font-size: ${responsiveTextSize({ current: width, target: 800, base: 18 })}
       }
       .desc {
         ${cssText($desc)}
-        font-size: ${responsiveTextSize({ current: width, target: 800, base: 18 })}
       }
       `,
           }}
