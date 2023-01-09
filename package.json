@@ -6,6 +6,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "build:devices": "yarn esno ./scripts/devices.ts",
     "type-check": "tsc",
     "lint:fix": "eslint . --fix"
   },
@@ -20,6 +21,7 @@
     "@react-three/fiber": "^8.9.1",
     "autoprefixer": "^10.4.13",
     "axios": "^0.21.1",
+    "clsx": "^1.2.1",
     "copy-to-clipboard": "^3.3.3",
     "devices.css": "^0.2.0",
     "leva": "^0.9.34",

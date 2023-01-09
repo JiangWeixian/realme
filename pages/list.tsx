@@ -64,7 +64,7 @@ const List = () => {
         {wigets.map((wiget) => {
           return (
             <div className="rounded-lg w-full aspect-[2/1] overflow-hidden" key={wiget.name}>
-              <RealmeImage src={`${API_URL}${wiget.url}`} alt={wiget.name} />
+              <RealmeImage src={`${API_URL}${wiget.url}`} name={wiget.name} />
               <div className="flex items-center mt-4 cursor-pointer">
                 {wiget.docs && (
                   <a href={wiget.docs} rel="noopener noreferrer" target="_blank">
