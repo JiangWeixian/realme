@@ -25,17 +25,17 @@ const wigets = [
   {
     name: 'mdx',
     docs: 'https://github.com/JiangWeixian/realme#mdx',
-    url: '/mdx.svg?remoteContent=https://ungh.cc/repos/JiangWeixian/realme/files/master/docs/mdx.mdx&width=660&height=1100',
+    url: '/mdx.svg?remoteContent=https://ungh.cc/repos/JiangWeixian/realme/files/master/docs/mdx.mdx',
   },
   {
     name: 'devices-iphonex',
     docs: 'https://github.com/JiangWeixian/realme#devices',
-    url: '/devices.svg?webgradientsName=BlueVelvet&width=800&height=400&type=iphonex&imgSrc=https://images.unsplash.com/photo-1527842891421-42eec6e703ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
+    url: '/devices.svg?webgradientsName=BlueVelvet&type=iphonex&imgSrc=https://images.unsplash.com/photo-1527842891421-42eec6e703ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
   },
   {
     name: 'devices-ipadpro',
     docs: 'https://github.com/JiangWeixian/realme#devices',
-    url: '/devices.svg?webgradientsName=WinterNeva&width=800&height=400&type=ipadpro&imgSrc=https://images.unsplash.com/photo-1527842891421-42eec6e703ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
+    url: '/devices.svg?webgradientsName=WinterNeva&type=ipadpro&imgSrc=https://images.unsplash.com/photo-1527842891421-42eec6e703ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
   },
 ]
 
