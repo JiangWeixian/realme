@@ -53,17 +53,17 @@ const RealmeImage = ({ src, name }: { src: string; name: string }) => {
 
 const List = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-screen min-h-screen bg-slate-50 dark:bg-slate-900 overflow-x-hidden overflow-y-auto py-4 pt-12">
+    <div className="flex flex-col items-center justify-start w-screen min-h-screen bg-slate-50 dark:bg-slate-900 overflow-x-hidden overflow-y-auto py-4 pt-12">
       <div className="w-10/12 mb-8">
         <h1 className="text-4xl text-white font-bold font-mono text-left">Available Wigets</h1>
         <p className="text-base text-slate-50/70 text-left">
           Click icon to see all endpoint params
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-8 py-4 w-10/12 min-h-screen">
+      <div className="grid grid-cols-2 grid-rows-3 gap-8 py-4 w-10/12">
         {wigets.map((wiget) => {
           return (
-            <div className="rounded-lg w-full aspect-[2/1] overflow-hidden" key={wiget.name}>
+            <div className="rounded-lg aspect-[2/1] overflow-hidden" key={wiget.name}>
               <RealmeImage src={`${API_URL}${wiget.url}`} name={wiget.name} />
               <div className="flex items-center mt-4 cursor-pointer">
                 {wiget.docs && (
