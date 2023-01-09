@@ -42,13 +42,13 @@ export const $radialgradients = css`
 `
 
 export const $title = css`
-  @apply text-white text-6xl font-bold m-0 p-0;
+  @apply text-white text-center text-6xl font-bold m-0 p-0;
 `
 
 export const $desc = css`
-  @apply text-white font-thin m-0 p-0;
+  @apply text-white text-center font-thin m-0 p-0;
 `
 
 export const $subtitle = css`
-  @apply text-white font-semibold m-0 p-0;
+  @apply text-white text-center font-semibold m-0 p-0;
 `
