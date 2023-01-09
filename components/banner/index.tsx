@@ -1,16 +1,7 @@
 import React from 'react'
-import {
-  $foreignObject,
-  $container,
-  $circle,
-  $small,
-  $p,
-  $content,
-  $title,
-  $subtitle,
-  $desc,
-} from './styles'
+import { $container, $circle, $small, $p, $content, $title, $subtitle, $desc } from './styles'
 import { cssText } from 'lib/format'
+import { Svg, SvgProps } from '../svg'
 
 type Props = {
   colorA: string
@@ -19,7 +10,7 @@ type Props = {
   title: string
   subtitle: string
   desc: string
-}
+} & Pick<SvgProps, 'width' | 'height'>
 
 export const Inner = (props: Pick<Props, 'subtitle' | 'title' | 'desc'>) => {
   return (
@@ -59,34 +50,16 @@ export const Banner = ({
 }: Props = defaultProps) => {
   const code = <Inner title={title} subtitle={subtitle} desc={props.desc} />
   return (
-    <svg
-      width="800px"
-      height="400px"
-      viewBox="0 0 800 400"
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-    >
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-    foreignObject {
-      ${cssText($foreignObject)}
-    }
-  `,
-        }}
-      ></style>
-      <foreignObject>
-        {/* @ts-expect-error */}
-        <div className="container" xmlns="http://www.w3.org/1999/xhtml">
-          <style
-            dangerouslySetInnerHTML={{
-              __html: `
+    <Svg
+      width={props.width}
+      height={props.height}
+      style={
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
       .container {
         ${cssText($container)}
         background: linear-gradient(135deg, ${hash(colorA)} 0%, ${hash(colorB)} 100%);
-        width: 800px;
-        height: 400px;
       }
       .circle {
         aspect-ratio: 1 / 1;
@@ -114,11 +87,11 @@ export const Banner = ({
         ${cssText($desc)}
       }
       `,
-            }}
-          ></style>
-          {code}
-        </div>
-      </foreignObject>
-    </svg>
+          }}
+        ></style>
+      }
+    >
+      {code}
+    </Svg>
   )
 }

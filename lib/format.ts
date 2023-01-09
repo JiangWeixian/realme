@@ -33,3 +33,23 @@ export const normalizeSteps = (steps: (string | number)[]) => {
     return Number(v)
   })
 }
+
+type ResponseParams = {
+  /**
+   * a of a / b
+   */
+  current?: number | string,
+  /**
+   * b of a / b
+   */
+  target: number,
+  /**
+   * Base value when current / target = 1
+   */
+  base: number,
+  unit?: string
+}
+
+export const responsive = ({ current, target, base, unit = 'px' }: ResponseParams) => {
+  return `${(Number(current ?? target) / target) * base}${unit}`
+}

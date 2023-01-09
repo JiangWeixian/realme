@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyledWebGradients } from 'styled-webgradients/utils'
 
-import { Svg } from 'components/svg'
+import { Svg, SvgProps } from 'components/svg'
 import { $animation, $desc, $subtitle, $title, $webgradients, $webgradientsBg } from './styles'
 import { cssText } from 'lib/format'
 
@@ -11,7 +11,7 @@ export type WebGradientsProps = {
   desc?: string
   webgradientsName?: string
   radialgradiets?: boolean
-}
+} & Pick<SvgProps, 'width' | 'height'>
 
 const sw = new StyledWebGradients()
 
@@ -21,12 +21,16 @@ export const WebGradients = ({
   desc = 'Happy hacking',
   webgradientsName = 'WarmFlame',
   radialgradiets = false,
+  width,
+  height,
 }: WebGradientsProps = {}) => {
   const gradientCss = radialgradiets
     ? sw.unstable_buildRadialGradient(webgradientsName as any)
     : sw.buildLinearGradient(webgradientsName as any)
   return (
     <Svg
+      width={width}
+      height={height}
       style={
         <style
           dangerouslySetInnerHTML={{

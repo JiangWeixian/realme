@@ -3,7 +3,8 @@ import { StyledWebGradients } from 'styled-webgradients/utils'
 
 import { $styles } from './styles'
 import { Svg, SvgProps } from 'components/svg'
-import { cssText } from 'lib/format'
+import { cssText, responsive } from 'lib/format'
+import cx from 'clsx'
 
 const sw = new StyledWebGradients()
 
@@ -17,19 +18,25 @@ export type DevicesProps = {
 } & Pick<SvgProps, 'width' | 'height' | 'responsive'>
 
 export const DeviceIphoneX = (props: DevicesProps) => {
+  const scale = responsive({ current: props.width, target: 800, base: 40, unit: '' })
   return (
     <div className="relative h-full w-full flex justify-center items-center">
       <div
         style={{ position: 'absolute', width: '100%', height: '100%' }}
         className="absolute webgradients-bg h-full w-full z-0"
       />
-      <div className="flex justify-between items-center h-full w-10/12">
-        <div className="text-left relative">
+      <div className="flex justify-around items-center h-full w-10/12">
+        <div className="text-left relative w-1/2">
           <h1 className="text-white text-4xl font-bold">{props.title}</h1>
           <p className="text-gray-200 text-base">{props.desc}</p>
         </div>
         {/* trick: scale to make sure display pefert in [800, 400] scale */}
-        <div className="drop-shadow-md device device-iphone-x transform-gpu scale-40">
+        <div
+          className={cx(
+            'drop-shadow-md device device-iphone-x',
+            `scale-${Math.round(Number(scale))}`,
+          )}
+        >
           <div className="device-frame">
             <img className="device-screen" src={props.imgSrc} />
           </div>
@@ -45,19 +52,22 @@ export const DeviceIphoneX = (props: DevicesProps) => {
 }
 
 export const DeviceIPadPro = (props: DevicesProps) => {
+  const scale = responsive({ current: props.width, target: 800, base: 40, unit: '' })
   return (
     <div className="relative h-full w-full flex justify-center items-center">
       <div className="absolute webgradients-bg h-full w-full z-0" />
-      <div className="drop-shadow-md scale-65 origin-center transform -rotate-90 device device-ipad-pro">
-        <div className="device-frame">
-          <img className="device-screen" src={props.imgSrc} />
+      <div className="drop-shadow-md origin-center transform-gpu -rotate-90">
+        <div className={cx('device device-ipad-pro', `scale-${Math.round(Number(scale))}`)}>
+          <div className="device-frame">
+            <img className="device-screen" src={props.imgSrc} />
+          </div>
+          <div className="device-stripe"></div>
+          <div className="device-header"></div>
+          <div className="device-sensors"></div>
+          <div className="device-btns"></div>
+          <div className="device-power"></div>
+          <div className="device-home"></div>
         </div>
-        <div className="device-stripe"></div>
-        <div className="device-header"></div>
-        <div className="device-sensors"></div>
-        <div className="device-btns"></div>
-        <div className="device-power"></div>
-        <div className="device-home"></div>
       </div>
     </div>
   )

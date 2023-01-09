@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { cssText } from 'lib/format'
+import { cssText, responsive } from 'lib/format'
 import { $container, $foreignObject, $foreignHeroObject } from './styles'
 
 export type SvgProps = {
@@ -19,11 +19,14 @@ export type SvgProps = {
   responsive?: boolean
 }
 
+const withPx = (str?: string | number, fallback?: string) =>
+  str && !str.toString().endsWith('px') ? `${str}px` : fallback
+
 export const Svg = ({ type = 'hero', ...props }: SvgProps) => {
   return (
     <svg
-      width={props.responsive ? undefined : props.width ?? '800px'}
-      height={props.responsive ? undefined : props.height ?? '400px'}
+      width={props.responsive ? undefined : withPx(props.width, '800px')}
+      height={props.responsive ? undefined : withPx(props.height, '400px')}
       viewBox={
         props.responsive
           ? undefined
@@ -39,12 +42,19 @@ export const Svg = ({ type = 'hero', ...props }: SvgProps) => {
       <style
         dangerouslySetInnerHTML={{
           __html: `
+    :root {
+      font-size: ${responsive({ current: props.width, target: 800, base: 16 })}
+    }
     foreignObject {
       ${cssText($foreignObject)}
+      ${props.responsive ? `width: 100%;` : `width: ${withPx(props.width, '800px')};`}
+      ${props.responsive ? `height: 100%;` : `height: ${withPx(props.height, '400px')};`}
       ${type === 'hero' ? cssText($foreignHeroObject) : ''}
     }
     .container {
       ${cssText($container)}
+      ${props.responsive ? `width: 100%;` : `width: ${withPx(props.width, '800px')};`}
+      ${props.responsive ? `height: 100%;` : `height: ${withPx(props.height, '400px')};`}
     }
   `,
         }}

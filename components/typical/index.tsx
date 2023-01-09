@@ -2,7 +2,7 @@ import isNumber from 'lodash/isNumber'
 import isString from 'lodash/isString'
 import React from 'react'
 
-import { Svg } from 'components/svg'
+import { Svg, SvgProps } from 'components/svg'
 import { $typical, $character, $word } from './styles'
 import { cssText } from 'lib/format'
 
@@ -113,7 +113,7 @@ const toAnimations = (map: Record<string, Item>) => {
 
 export type TypicalProps = {
   steps: (string | number)[]
-}
+} & Pick<SvgProps, 'width' | 'height'>
 
 export const Typical = (props: TypicalProps) => {
   const animations = toAnimations(typical(props.steps))
@@ -130,6 +130,8 @@ export const Typical = (props: TypicalProps) => {
   })
   return (
     <Svg
+      width={props.width}
+      height={props.height}
       style={
         <style
           dangerouslySetInnerHTML={{

@@ -7,7 +7,7 @@ import { Svg, SvgProps } from 'components/svg'
 
 function Content({ source }: { source: MDXRemoteProps }) {
   return (
-    <div className="prose bg-slate-50 dark:bg-slate-900 w-full h-full p-8">
+    <div className="prose bg-slate-50 dark:bg-slate-900 w-full h-full p-8 max-w-full">
       <MDXRemote {...source} />
     </div>
   )

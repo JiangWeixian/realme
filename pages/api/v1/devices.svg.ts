@@ -28,6 +28,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         title: 'hello world',
         desc: 'indiehackers',
         imgSrc: imgB64,
+        width,
+        height,
       }),
     )
     const rawStyles = generateStyles(rawContent)
