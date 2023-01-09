@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 1.6.0
+
+### Minor Changes
+
+- c8f5dd9: devices
+
+### Patch Changes
+
+- 55fc8b3: responsive text on mdx and devices
+- b049b72: responsive text on webgradients and typical
+- 20dce9d: full wh not working on mobile
+
 ## 1.5.0
 
 ### Minor Changes
