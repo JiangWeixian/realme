@@ -8,6 +8,23 @@ _github readme component api kit_
 
 <a href="https://www.producthunt.com/posts/realme?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-realme" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=302886&theme=light" alt="realme - some api kit help you write beautify markdown | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
+> **⚠️ WARNING**  
+`<foreignObject>` behavior different on mobile and pc browser, content inside `svg` not scale into correct width and height on iOS Safari or Chrome browser. If you want to use it in mobile browser, you should pass `width & height` with url query. e.g. `https://endpoints.svg?width=<width>&heigth=<height>`.
+> 
+> In React
+> ```tsx
+> import useMeasure from 'react-use-measure'
+> 
+> const RealmeImage = () => {
+>   const [ref, bounds] = useMeasure()
+>   return (
+>     <div className="w-full" ref={ref}>
+>       <img src={`https://endpoints.svg?width=${bounds.width}&height=${bounds.height}`} />
+>     </div>
+>   )  
+> } 
+> ```
+
 ## usage
 
 ### `banner`
