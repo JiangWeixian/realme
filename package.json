@@ -40,7 +40,7 @@
     "react-hot-toast": "^2.4.0",
     "react-use-measure": "^2.1.1",
     "styled-components": "^5.3.0",
-    "styled-webgradients": "2.0.0",
+    "styled-webgradients": "2.1.0",
     "three": "^0.147.0",
     "three-stdlib": "^2.20.2",
     "windicss": "^3.5.6"

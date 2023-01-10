@@ -7208,10 +7208,10 @@ styled-jsx@5.0.2:
   resolved "https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.0.2.tgz#ff230fd593b737e9e68b630a694d460425478729"
   integrity sha512-LqPQrbBh3egD57NBcHET4qcgshPks+yblyhPlH2GY8oaDgKs8SK4C3dBh3oSJjgzJ3G5t1SYEZGHkP+QEpX9EQ==
 
-styled-webgradients@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/styled-webgradients/-/styled-webgradients-2.0.0.tgz#62b71881fcf02f8a94f0f265cace2898404ae5e6"
-  integrity sha512-34Q9R0Cs34nc8yP0e5QGZZrOnvxM5cDJuuFVrcegVGx5bve8EcLUO3xAY1Jh2VK15xjqfUKa9M/yhL3/nJKQpA==
+styled-webgradients@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/styled-webgradients/-/styled-webgradients-2.1.0.tgz#9a26d9bc4a2733b41c988bba81764950330ced5b"
+  integrity sha512-TEJxtbODit/taMy7z5nXkDd4BhHVDbJiooUjU5q2RdAq3NNIQnCJP7YO505OG46HPfZ4t05OD7voayannehg1Q==
   dependencies:
     polished "^4.2.2"
 

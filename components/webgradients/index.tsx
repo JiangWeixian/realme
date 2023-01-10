@@ -25,8 +25,8 @@ export const WebGradients = ({
   height,
 }: WebGradientsProps = {}) => {
   const gradientCss = radialgradiets
-    ? sw.unstable_buildRadialGradient(webgradientsName as any)
-    : sw.buildLinearGradient(webgradientsName as any)
+    ? sw.unstable_buildRadialGradient(webgradientsName as any, { raw: true })
+    : sw.buildLinearGradient(webgradientsName as any, { raw: true })
   return (
     <Svg
       width={width}
@@ -41,7 +41,7 @@ export const WebGradients = ({
       }
       .webgradients-bg {
         ${cssText($webgradientsBg)}
-        ${cssText(gradientCss)}
+        ${gradientCss}
       }
       .webgradients-bg {
         background-color: #f8fafc;

@@ -3,7 +3,7 @@ import { StyledWebGradients } from 'styled-webgradients/utils'
 
 import { $styles } from './styles'
 import { Svg, SvgProps } from 'components/svg'
-import { cssText, responsive } from 'lib/format'
+import { responsive } from 'lib/format'
 import cx from 'clsx'
 
 const sw = new StyledWebGradients()
@@ -79,6 +79,7 @@ export const DeviceIPadPro = (props: DevicesProps) => {
 export const Devices = (props: DevicesProps) => {
   const gradientCss = sw.unstable_buildRadialGradient(
     (props.webgradientsName ?? 'HappyFisher') as any,
+    { raw: true },
   )
   return (
     <Svg
@@ -91,7 +92,7 @@ export const Devices = (props: DevicesProps) => {
     ${$styles}
     ${props.rawStyles}
     .webgradients-bg {
-      ${cssText(gradientCss)}
+      ${gradientCss}
     }
     .webgradients-bg {
       background-color: #f8fafc;
